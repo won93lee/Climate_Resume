@@ -1,504 +1,487 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.6">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000; min-height: 14.0px}
-    span.s1 {font-kerning: none}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harold Flores — Systems Engineering &amp; Climate Governance</title>
+<meta name="description" content="Harold Flores — Operations and governance leader bridging enterprise systems engineering with climate policy and sustainable development.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+  :root{
+    --bg:#0b1424;
+    --bg-raised:#101d33;
+    --bg-raised-2:#0e1a2e;
+    --line:#22314c;
+    --line-soft:#1a2740;
+    --text:#e9eef6;
+    --text-muted:#8fa0bd;
+    --text-dim:#5f7291;
+    --teal:#2dd4bf;
+    --teal-dim:#0d5c53;
+    --mint:#34d399;
+    --mint-dim:#0d5c3f;
+  }
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter',ui-sans-serif,system-ui,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .font-display{font-family:'Space Grotesk',ui-sans-serif,system-ui,sans-serif;}
+  .tabular{font-variant-numeric:tabular-nums;}
+
+  ::selection{background:var(--teal-dim);color:#eafff9;}
+
+  .grain-panel{
+    background-image:
+      radial-gradient(circle at 1px 1px, rgba(148,175,209,0.10) 1px, transparent 0);
+    background-size: 22px 22px;
+  }
+
+  .nav-link{position:relative;color:var(--text-muted);transition:color .2s ease;}
+  .nav-link:hover{color:var(--text);}
+  .nav-link::after{
+    content:"";position:absolute;left:0;right:0;bottom:-6px;height:1px;
+    background:var(--teal);transform:scaleX(0);transform-origin:left;
+    transition:transform .25s ease;
+  }
+  .nav-link:hover::after{transform:scaleX(1);}
+
+  /* circuit-trace timeline */
+  .trace-line{
+    position:absolute;left:0;top:0.55rem;bottom:-2.25rem;width:1px;
+    background:linear-gradient(to bottom, var(--line) 0%, var(--line) 100%);
+  }
+  .trace-node{
+    width:9px;height:9px;background:var(--bg);border:1.5px solid var(--teal);
+    position:absolute;left:-4.5px;top:0.3rem;
+    transform:rotate(45deg);
+  }
+  .trace-item:last-child .trace-line{display:none;}
+
+  .role-card{
+    border-top:1px solid var(--line-soft);
+    transition:border-color .2s ease;
+  }
+  .role-card:hover{border-top-color:var(--teal-dim);}
+
+  .skill-row{border-bottom:1px solid var(--line-soft);}
+  .skill-row:last-child{border-bottom:none;}
+
+  .cert-row{border-bottom:1px solid var(--line-soft);}
+  .cert-row:last-child{border-bottom:none;}
+
+  .stat-divider{border-left:1px solid var(--line);}
+
+  a.underline-link{
+    text-decoration:underline;
+    text-decoration-color:var(--line);
+    text-underline-offset:4px;
+    transition:text-decoration-color .2s ease, color .2s ease;
+  }
+  a.underline-link:hover{
+    text-decoration-color:var(--teal);
+    color:var(--text);
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{transition:none !important; animation:none !important;}
+  }
+
+  :focus-visible{outline:2px solid var(--teal);outline-offset:3px;}
+</style>
 </head>
-<body>
-<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
-<p class="p1"><span class="s1">&lt;html lang="en"&gt;</span></p>
-<p class="p1"><span class="s1">&lt;head&gt;</span></p>
-<p class="p1"><span class="s1">&lt;meta charset="UTF-8"&gt;</span></p>
-<p class="p1"><span class="s1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span></p>
-<p class="p1"><span class="s1">&lt;title&gt;Harold Flores — Systems Engineering &amp;amp; Climate Governance&lt;/title&gt;</span></p>
-<p class="p1"><span class="s1">&lt;meta name="description" content="Harold Flores — Operations and governance leader bridging enterprise systems engineering with climate policy and sustainable development."&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;</span></p>
-<p class="p1"><span class="s1">&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;</span></p>
-<p class="p1"><span class="s1">&lt;link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"&gt;</span></p>
-<p class="p1"><span class="s1">&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"&gt;</span></p>
-<p class="p1"><span class="s1">&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">&lt;style&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>:root{</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>--bg:#0b1424;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>--bg-raised:#101d33;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>--bg-raised-2:#0e1a2e;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>--line:#22314c;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>--line-soft:#1a2740;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>--text:#e9eef6;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>--text-muted:#8fa0bd;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>--text-dim:#5f7291;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>--teal:#2dd4bf;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>--teal-dim:#0d5c53;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>--mint:#34d399;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>--mint-dim:#0d5c3f;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>html{scroll-behavior:smooth;}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>body{</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background:var(--bg);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>color:var(--text);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-family:'Inter',ui-sans-serif,system-ui,sans-serif;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>-webkit-font-smoothing:antialiased;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.font-display{font-family:'Space Grotesk',ui-sans-serif,system-ui,sans-serif;}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.tabular{font-variant-numeric:tabular-nums;}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>::selection{background:var(--teal-dim);color:#eafff9;}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.grain-panel{</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background-image:</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>radial-gradient(circle at 1px 1px, rgba(148,175,209,0.10) 1px, transparent 0);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background-size: 22px 22px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.nav-link{position:relative;color:var(--text-muted);transition:color .2s ease;}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.nav-link:hover{color:var(--text);}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.nav-link::after{</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>content:"";position:absolute;left:0;right:0;bottom:-6px;height:1px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background:var(--teal);transform:scaleX(0);transform-origin:left;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>transition:transform .25s ease;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.nav-link:hover::after{transform:scaleX(1);}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>/* circuit-trace timeline */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.trace-line{</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>position:absolute;left:0;top:0.55rem;bottom:-2.25rem;width:1px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background:linear-gradient(to bottom, var(--line) 0%, var(--line) 100%);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.trace-node{</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>width:9px;height:9px;background:var(--bg);border:1.5px solid var(--teal);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>position:absolute;left:-4.5px;top:0.3rem;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>transform:rotate(45deg);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.trace-item:last-child .trace-line{display:none;}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.role-card{</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-top:1px solid var(--line-soft);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>transition:border-color .2s ease;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.role-card:hover{border-top-color:var(--teal-dim);}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.skill-row{border-bottom:1px solid var(--line-soft);}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.skill-row:last-child{border-bottom:none;}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.cert-row{border-bottom:1px solid var(--line-soft);}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.cert-row:last-child{border-bottom:none;}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.stat-divider{border-left:1px solid var(--line);}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>a.underline-link{</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>text-decoration:underline;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>text-decoration-color:var(--line);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>text-underline-offset:4px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>transition:text-decoration-color .2s ease, color .2s ease;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>a.underline-link:hover{</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>text-decoration-color:var(--teal);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>color:var(--text);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>@media (prefers-reduced-motion: reduce){</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>html{scroll-behavior:auto;}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>*{transition:none !important; animation:none !important;}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>:focus-visible{outline:2px solid var(--teal);outline-offset:3px;}</span></p>
-<p class="p1"><span class="s1">&lt;/style&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">&lt;body class="min-h-screen"&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">&lt;!-- NAV --&gt;</span></p>
-<p class="p1"><span class="s1">&lt;header class="sticky top-0 z-40 border-b border-[var(--line-soft)] bg-[var(--bg)]/90 backdrop-blur"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="max-w-5xl mx-auto px-6 sm:px-8 h-16 flex items-center justify-between"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;a href="#top" class="font-display font-semibold tracking-tight text-[15px] text-[var(--text)]"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>Harold Flores</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;nav class="hidden sm:flex items-center gap-8 text-sm"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;a href="#experience" class="nav-link"&gt;Experience&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;a href="#competencies" class="nav-link"&gt;Competencies&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;a href="#credentials" class="nav-link"&gt;Credentials&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;a href="#contact" class="nav-link"&gt;Contact&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/nav&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;a href="mailto:won93lee@proton.me" class="sm:hidden text-[var(--teal)]"&gt;&lt;i class="fa-solid fa-envelope"&gt;&lt;/i&gt;&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/header&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">&lt;!-- HERO --&gt;</span></p>
-<p class="p1"><span class="s1">&lt;section id="top" class="max-w-5xl mx-auto px-6 sm:px-8 pt-16 pb-20 sm:pt-24 sm:pb-28"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;p class="text-sm text-[var(--text-dim)] mb-6"&gt;Fairfax, Virginia&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;h1 class="font-display font-medium leading-[1.08] text-[clamp(2rem,5.2vw,3.4rem)] max-w-3xl"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>Ten years building the systems that keep institutions running.</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;span class="block text-[var(--text-muted)]"&gt;Now applying that discipline to climate governance.&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/h1&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;p class="mt-8 max-w-2xl text-[var(--text-muted)] leading-relaxed text-[15px] sm:text-base"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>Harold Flores manages enterprise infrastructure, compliance frameworks, and cross-functional</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>program delivery for regulated organizations across the U.S. and Asia. A Bachelor's in Global</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>Affairs — concentrated in Human Security and Global Governance — sits alongside specialized</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>training in climate finance, green industrial policy, and international climate negotiations.</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>The goal: executive-level roles at mission-driven climate and sustainable-development institutions</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>that need someone who can operate the machinery, not just advocate for it.</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/p&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-[var(--text-muted)]"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;a href="mailto:won93lee@proton.me" class="flex items-center gap-2 underline-link"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;i class="fa-solid fa-envelope text-[var(--teal)] w-4"&gt;&lt;/i&gt; won93lee@proton.me</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;a href="tel:14349603542" class="flex items-center gap-2 underline-link"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;i class="fa-solid fa-phone text-[var(--teal)] w-4"&gt;&lt;/i&gt; 434-960-3542</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;span class="flex items-center gap-2"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;i class="fa-solid fa-location-dot text-[var(--teal)] w-4"&gt;&lt;/i&gt; Fairfax, Virginia</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/section&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">&lt;!-- IMPACT METRICS --&gt;</span></p>
-<p class="p1"><span class="s1">&lt;section class="border-y border-[var(--line-soft)] grain-panel bg-[var(--bg-raised-2)]/60"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="max-w-5xl mx-auto px-6 sm:px-8 py-10 sm:py-12"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p class="text-xs uppercase tracking-wider text-[var(--text-dim)] mb-6" style="letter-spacing:0.08em"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>Measured outcomes, SAP Field Systems Administration — AIM Innovations LLC</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="grid grid-cols-3 divide-x divide-[var(--line)]"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="pr-4 sm:pr-8"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="font-display font-semibold tabular text-[clamp(1.8rem,4.5vw,2.75rem)] text-[var(--mint)]"&gt;33%&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="mt-2 text-xs sm:text-sm text-[var(--text-muted)] leading-snug"&gt;reduction in administrative overhead&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="px-4 sm:px-8"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="font-display font-semibold tabular text-[clamp(1.8rem,4.5vw,2.75rem)] text-[var(--teal)]"&gt;80%&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="mt-2 text-xs sm:text-sm text-[var(--text-muted)] leading-snug"&gt;reduction in system vulnerabilities&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="pl-4 sm:pl-8"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="font-display font-semibold tabular text-[clamp(1.8rem,4.5vw,2.75rem)] text-[var(--mint)]"&gt;100%&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="mt-2 text-xs sm:text-sm text-[var(--text-muted)] leading-snug"&gt;audit compliance sustained&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/section&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">&lt;!-- EXPERIENCE --&gt;</span></p>
-<p class="p1"><span class="s1">&lt;section id="experience" class="max-w-5xl mx-auto px-6 sm:px-8 py-20 sm:py-28"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="mb-14 max-w-2xl"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h2 class="font-display font-medium text-2xl sm:text-3xl"&gt;Professional experience&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p class="mt-3 text-[var(--text-muted)] text-[15px] leading-relaxed"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>Seven roles across federal contracting, higher education, and enterprise IT — each one adding</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>a layer of operational or compliance responsibility.</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="relative pl-8 sm:pl-10"&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="trace-item relative pb-14"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;span class="trace-line"&gt;&lt;/span&gt;&lt;span class="trace-node"&gt;&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="role-card pt-6"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;h3 class="font-display font-medium text-lg text-[var(--text)]"&gt;Expert Systems Engineer&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="text-xs text-[var(--text-dim)] tabular"&gt;Nov 2022 — Present&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="text-sm text-[var(--teal)] mt-1"&gt;Vanjure LLC&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="mt-3 text-sm text-[var(--text-muted)] leading-relaxed max-w-xl"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>Owns systems engineering and infrastructure delivery for enterprise clients, translating</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>operational requirements into resilient, compliant technical architecture.</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="trace-item relative pb-14"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;span class="trace-line"&gt;&lt;/span&gt;&lt;span class="trace-node"&gt;&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="role-card pt-6"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;h3 class="font-display font-medium text-lg text-[var(--text)]"&gt;SAP Field Systems Administrator III&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="text-xs text-[var(--text-dim)] tabular"&gt;Nov 2019 — Nov 2022&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="text-sm text-[var(--teal)] mt-1"&gt;AIM Innovations LLC&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;ul class="mt-3 space-y-1.5 text-sm text-[var(--text-muted)] leading-relaxed max-w-xl"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;li class="flex gap-2"&gt;&lt;i class="fa-solid fa-check text-[var(--mint)] text-xs mt-1.5"&gt;&lt;/i&gt;Cut administrative overhead by 33% through process consolidation.&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;li class="flex gap-2"&gt;&lt;i class="fa-solid fa-check text-[var(--mint)] text-xs mt-1.5"&gt;&lt;/i&gt;Reduced system vulnerabilities by 80% via hardening and patch discipline.&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;li class="flex gap-2"&gt;&lt;i class="fa-solid fa-check text-[var(--mint)] text-xs mt-1.5"&gt;&lt;/i&gt;Sustained 100% audit compliance across the administration cycle.&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/ul&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="trace-item relative pb-14"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;span class="trace-line"&gt;&lt;/span&gt;&lt;span class="trace-node"&gt;&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="role-card pt-6"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;h3 class="font-display font-medium text-lg text-[var(--text)]"&gt;Senior Mission Support Officer&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="text-xs text-[var(--text-dim)] tabular"&gt;Aug 2018 — Nov 2019&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="text-sm text-[var(--teal)] mt-1"&gt;TPGS Federal&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="mt-3 text-sm text-[var(--text-muted)] leading-relaxed max-w-xl"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>Supported federal mission operations, coordinating logistics and administrative readiness</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>across program teams.</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="trace-item relative pb-14"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;span class="trace-line"&gt;&lt;/span&gt;&lt;span class="trace-node"&gt;&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="role-card pt-6"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;h3 class="font-display font-medium text-lg text-[var(--text)]"&gt;All-Source Analyst, Watch Listing&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="text-xs text-[var(--text-dim)] tabular"&gt;Jun 2018 — Aug 2018&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="text-sm text-[var(--teal)] mt-1"&gt;BAE Systems&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="mt-3 text-sm text-[var(--text-muted)] leading-relaxed max-w-xl"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>Synthesized multi-source data into watch-list analysis products for federal review.</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="trace-item relative pb-14"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;span class="trace-line"&gt;&lt;/span&gt;&lt;span class="trace-node"&gt;&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="role-card pt-6"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;h3 class="font-display font-medium text-lg text-[var(--text)]"&gt;Access Control Specialist&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="text-xs text-[var(--text-dim)] tabular"&gt;Sep 2017 — Jun 2018&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="text-sm text-[var(--teal)] mt-1"&gt;Cencore LLC&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="mt-3 text-sm text-[var(--text-muted)] leading-relaxed max-w-xl"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>Managed physical and systems access control protocols for a secure facility environment.</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="trace-item relative pb-14"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;span class="trace-line"&gt;&lt;/span&gt;&lt;span class="trace-node"&gt;&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="role-card pt-6"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;h3 class="font-display font-medium text-lg text-[var(--text)]"&gt;Technical Office Assistant III&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="text-xs text-[var(--text-dim)] tabular"&gt;Jan 2014 — Sep 2017&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="text-sm text-[var(--teal)] mt-1"&gt;George Mason University&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="mt-3 text-sm text-[var(--text-muted)] leading-relaxed max-w-xl"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>Provided technical and administrative office support across a multi-year appointment,</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>building the operational foundation for later systems and compliance work.</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="trace-item relative pb-2"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;span class="trace-line"&gt;&lt;/span&gt;&lt;span class="trace-node"&gt;&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="role-card pt-6"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;h3 class="font-display font-medium text-lg text-[var(--text)]"&gt;Assistant Program &amp;amp; University Organizer&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="text-xs text-[var(--text-dim)] tabular"&gt;Aug 2015 — Dec 2015&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="text-sm text-[var(--teal)] mt-1"&gt;George Mason University — South Korea&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="mt-3 text-sm text-[var(--text-muted)] leading-relaxed max-w-xl"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>Organized program logistics for GMU's Songdo, South Korea campus — an early cross-border</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>operations posting, concurrent with the Technical Office Assistant appointment.</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/section&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">&lt;!-- COMPETENCIES --&gt;</span></p>
-<p class="p1"><span class="s1">&lt;section id="competencies" class="border-y border-[var(--line-soft)] bg-[var(--bg-raised)]"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="max-w-5xl mx-auto px-6 sm:px-8 py-20 sm:py-28"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="mb-14 max-w-2xl"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;h2 class="font-display font-medium text-2xl sm:text-3xl"&gt;Where systems thinking meets policy&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;p class="mt-3 text-[var(--text-muted)] text-[15px] leading-relaxed"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>Two skill sets, one operating style: build the infrastructure, understand the rules it has</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>to comply with.</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="grid sm:grid-cols-2 sm:divide-x divide-[var(--line)]"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="sm:pr-10 pb-10 sm:pb-0"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h3 class="font-display text-sm text-[var(--teal)] mb-5"&gt;Systems &amp;amp; infrastructure&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="skill-row flex items-center gap-3 py-3"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;i class="fa-solid fa-server text-[var(--teal)] w-5 text-center"&gt;&lt;/i&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="text-sm text-[var(--text)]"&gt;Enterprise infrastructure &amp;amp; SAP field administration&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="skill-row flex items-center gap-3 py-3"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;i class="fa-solid fa-shield-halved text-[var(--teal)] w-5 text-center"&gt;&lt;/i&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="text-sm text-[var(--text)]"&gt;Cybersecurity hardening &amp;amp; vulnerability reduction&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="skill-row flex items-center gap-3 py-3"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;i class="fa-solid fa-cloud text-[var(--teal)] w-5 text-center"&gt;&lt;/i&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="text-sm text-[var(--text)]"&gt;Cloud operations (AWS)&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="skill-row flex items-center gap-3 py-3"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;i class="fa-solid fa-clipboard-check text-[var(--teal)] w-5 text-center"&gt;&lt;/i&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="text-sm text-[var(--text)]"&gt;Compliance frameworks &amp;amp; audit readiness&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="skill-row flex items-center gap-3 py-3"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;i class="fa-solid fa-diagram-project text-[var(--teal)] w-5 text-center"&gt;&lt;/i&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="text-sm text-[var(--text)]"&gt;IT service management (ITIL4)&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="skill-row flex items-center gap-3 py-3"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;i class="fa-solid fa-list-check text-[var(--teal)] w-5 text-center"&gt;&lt;/i&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="text-sm text-[var(--text)]"&gt;Cross-functional program delivery&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="sm:pl-10 pt-10 sm:pt-0"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h3 class="font-display text-sm text-[var(--mint)] mb-5"&gt;Climate &amp;amp; governance&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="skill-row flex items-center gap-3 py-3"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;i class="fa-solid fa-earth-americas text-[var(--mint)] w-5 text-center"&gt;&lt;/i&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="text-sm text-[var(--text)]"&gt;International climate negotiations&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="skill-row flex items-center gap-3 py-3"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;i class="fa-solid fa-sack-dollar text-[var(--mint)] w-5 text-center"&gt;&lt;/i&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="text-sm text-[var(--text)]"&gt;Climate finance &amp;amp; scaling mechanisms&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="skill-row flex items-center gap-3 py-3"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;i class="fa-solid fa-industry text-[var(--mint)] w-5 text-center"&gt;&lt;/i&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="text-sm text-[var(--text)]"&gt;Green industrial policy&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="skill-row flex items-center gap-3 py-3"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;i class="fa-solid fa-seedling text-[var(--mint)] w-5 text-center"&gt;&lt;/i&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="text-sm text-[var(--text)]"&gt;Green economy &amp;amp; trade (PAGE)&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="skill-row flex items-center gap-3 py-3"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;i class="fa-solid fa-people-group text-[var(--mint)] w-5 text-center"&gt;&lt;/i&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="text-sm text-[var(--text)]"&gt;Human security &amp;amp; global governance&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="skill-row flex items-center gap-3 py-3"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;i class="fa-solid fa-house-flood-water text-[var(--mint)] w-5 text-center"&gt;&lt;/i&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="text-sm text-[var(--text)]"&gt;Emergency &amp;amp; disaster liaison response&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/section&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">&lt;!-- EDUCATION --&gt;</span></p>
-<p class="p1"><span class="s1">&lt;section class="max-w-5xl mx-auto px-6 sm:px-8 py-16 sm:py-20"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="grid sm:grid-cols-[1fr_1.4fr] gap-10 sm:gap-16"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;h2 class="font-display font-medium text-2xl sm:text-3xl"&gt;Education&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;h3 class="font-display text-lg text-[var(--text)]"&gt;Bachelor of Arts, Global Affairs&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;p class="text-sm text-[var(--teal)] mt-1"&gt;George Mason University&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;p class="mt-3 text-sm text-[var(--text-muted)] leading-relaxed max-w-lg"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>Concentration in Human Security and Global Governance — the policy foundation underpinning</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>the later climate specialization below.</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/section&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">&lt;!-- CREDENTIALS --&gt;</span></p>
-<p class="p1"><span class="s1">&lt;section id="credentials" class="border-t border-[var(--line-soft)] bg-[var(--bg-raised-2)]/60 grain-panel"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="max-w-5xl mx-auto px-6 sm:px-8 py-20 sm:py-28"&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="grid sm:grid-cols-[1fr_1.4fr] gap-10 sm:gap-16 mb-16"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h2 class="font-display font-medium text-2xl sm:text-3xl"&gt;Climate &amp;amp; sustainability training&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="mt-3 text-sm text-[var(--text-muted)] leading-relaxed"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>Coursework completed through the UN's climate learning partnership.</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="cert-row flex flex-wrap items-baseline justify-between gap-x-4 py-3"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="text-sm text-[var(--text)]"&gt;Mastering International Climate Negotiations&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="text-xs text-[var(--text-dim)]"&gt;UN CC:e-Learn&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="cert-row flex flex-wrap items-baseline justify-between gap-x-4 py-3"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="text-sm text-[var(--text)]"&gt;Scaling Climate Finance&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="text-xs text-[var(--text-dim)]"&gt;UN CC:e-Learn&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="cert-row flex flex-wrap items-baseline justify-between gap-x-4 py-3"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="text-sm text-[var(--text)]"&gt;Green Economy and Trade&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="text-xs text-[var(--text-dim)]"&gt;PAGE / UN CC:e-Learn&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="cert-row flex flex-wrap items-baseline justify-between gap-x-4 py-3"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="text-sm text-[var(--text)]"&gt;Green Industrial Policy&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="text-xs text-[var(--text-dim)]"&gt;UN CC:e-Learn&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="grid sm:grid-cols-[1fr_1.4fr] gap-10 sm:gap-16"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h2 class="font-display font-medium text-2xl sm:text-3xl"&gt;Certifications&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="mt-3 text-sm text-[var(--text-muted)] leading-relaxed"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>Active credentials spanning cloud, security, and program management.</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="cert-row flex flex-wrap items-baseline justify-between gap-x-4 py-3"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="text-sm text-[var(--text)]"&gt;AWS Certified Cloud Practitioner &amp;amp; SysOps Administrator&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="text-xs text-[var(--text-dim)] tabular"&gt;2023–2026&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="cert-row flex flex-wrap items-baseline justify-between gap-x-4 py-3"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="text-sm text-[var(--text)]"&gt;CompTIA Security+ SY0-701&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="text-xs text-[var(--text-dim)] tabular"&gt;2025–2028&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="cert-row flex flex-wrap items-baseline justify-between gap-x-4 py-3"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="text-sm text-[var(--text)]"&gt;Palo Alto Networks Cybersecurity Professional&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="text-xs text-[var(--text-dim)] tabular"&gt;2023–2026&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="cert-row flex flex-wrap items-baseline justify-between gap-x-4 py-3"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="text-sm text-[var(--text)]"&gt;IT Infrastructure Library (ITIL4)&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="text-xs text-[var(--text-dim)] tabular"&gt;2024–2027&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="cert-row flex flex-wrap items-baseline justify-between gap-x-4 py-3"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="text-sm text-[var(--text)]"&gt;Google Project Management Professional&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="text-xs text-[var(--text-dim)] tabular"&gt;2022&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="cert-row flex flex-wrap items-baseline justify-between gap-x-4 py-3"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="text-sm text-[var(--text)]"&gt;FEMA All-Hazards Liaison Officer (L956), APS Certificate &amp;amp; PDS&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="text-xs text-[var(--text-dim)] tabular"&gt;2015–2016&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/section&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">&lt;!-- LANGUAGES --&gt;</span></p>
-<p class="p1"><span class="s1">&lt;section class="max-w-5xl mx-auto px-6 sm:px-8 py-14"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="grid sm:grid-cols-[1fr_1.4fr] gap-10 sm:gap-16 items-baseline"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h2 class="font-display font-medium text-2xl sm:text-3xl"&gt;Languages&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="flex flex-wrap gap-x-10 gap-y-2 text-sm text-[var(--text-muted)]"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;span&gt;&lt;span class="text-[var(--text)]"&gt;English&lt;/span&gt; — Native&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;span&gt;&lt;span class="text-[var(--text)]"&gt;Korean&lt;/span&gt; — Intermediate&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;span&gt;&lt;span class="text-[var(--text)]"&gt;Tagalog&lt;/span&gt; — Intermediate&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/section&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">&lt;!-- CONTACT / FOOTER --&gt;</span></p>
-<p class="p1"><span class="s1">&lt;footer id="contact" class="border-t border-[var(--line-soft)]"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="max-w-5xl mx-auto px-6 sm:px-8 py-20 sm:py-24"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h2 class="font-display font-medium text-[clamp(1.6rem,4vw,2.6rem)] max-w-2xl leading-tight"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>Building the operational backbone for climate work that needs one.</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="mt-10 flex flex-wrap gap-x-10 gap-y-4 text-sm"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;a href="mailto:won93lee@proton.me" class="flex items-center gap-2 underline-link"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;i class="fa-solid fa-envelope text-[var(--teal)]"&gt;&lt;/i&gt; won93lee@proton.me</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;a href="tel:14349603542" class="flex items-center gap-2 underline-link"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;i class="fa-solid fa-phone text-[var(--teal)]"&gt;&lt;/i&gt; 434-960-3542</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;span class="flex items-center gap-2 text-[var(--text-muted)]"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;i class="fa-solid fa-location-dot text-[var(--teal)]"&gt;&lt;/i&gt; Fairfax, Virginia</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p class="mt-16 text-xs text-[var(--text-dim)]"&gt;Harold Flores&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/footer&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+
+<body class="min-h-screen">
+
+<!-- NAV -->
+<header class="sticky top-0 z-40 border-b border-[var(--line-soft)] bg-[var(--bg)]/90 backdrop-blur">
+  <div class="max-w-5xl mx-auto px-6 sm:px-8 h-16 flex items-center justify-between">
+    <a href="#top" class="font-display font-semibold tracking-tight text-[15px] text-[var(--text)]">
+      Harold Flores
+    </a>
+    <nav class="hidden sm:flex items-center gap-8 text-sm">
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#competencies" class="nav-link">Competencies</a>
+      <a href="#credentials" class="nav-link">Credentials</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+    <a href="mailto:won93lee@proton.me" class="sm:hidden text-[var(--teal)]"><i class="fa-solid fa-envelope"></i></a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="top" class="max-w-5xl mx-auto px-6 sm:px-8 pt-16 pb-20 sm:pt-24 sm:pb-28">
+  <p class="text-sm text-[var(--text-dim)] mb-6">Fairfax, Virginia</p>
+  <h1 class="font-display font-medium leading-[1.08] text-[clamp(2rem,5.2vw,3.4rem)] max-w-3xl">
+    Ten years building the systems that keep institutions running.
+    <span class="block text-[var(--text-muted)]">Now applying that discipline to climate governance.</span>
+  </h1>
+  <p class="mt-8 max-w-2xl text-[var(--text-muted)] leading-relaxed text-[15px] sm:text-base">
+    Harold Flores manages enterprise infrastructure, compliance frameworks, and cross-functional
+    program delivery for regulated organizations across the U.S. and Asia. A Bachelor's in Global
+    Affairs — concentrated in Human Security and Global Governance — sits alongside specialized
+    training in climate finance, green industrial policy, and international climate negotiations.
+    The goal: executive-level roles at mission-driven climate and sustainable-development institutions
+    that need someone who can operate the machinery, not just advocate for it.
+  </p>
+
+  <div class="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-[var(--text-muted)]">
+    <a href="mailto:won93lee@proton.me" class="flex items-center gap-2 underline-link">
+      <i class="fa-solid fa-envelope text-[var(--teal)] w-4"></i> won93lee@proton.me
+    </a>
+    <a href="tel:14349603542" class="flex items-center gap-2 underline-link">
+      <i class="fa-solid fa-phone text-[var(--teal)] w-4"></i> 434-960-3542
+    </a>
+    <span class="flex items-center gap-2">
+      <i class="fa-solid fa-location-dot text-[var(--teal)] w-4"></i> Fairfax, Virginia
+    </span>
+  </div>
+</section>
+
+<!-- IMPACT METRICS -->
+<section class="border-y border-[var(--line-soft)] grain-panel bg-[var(--bg-raised-2)]/60">
+  <div class="max-w-5xl mx-auto px-6 sm:px-8 py-10 sm:py-12">
+    <p class="text-xs uppercase tracking-wider text-[var(--text-dim)] mb-6" style="letter-spacing:0.08em">
+      Measured outcomes, SAP Field Systems Administration — AIM Innovations LLC
+    </p>
+    <div class="grid grid-cols-3 divide-x divide-[var(--line)]">
+      <div class="pr-4 sm:pr-8">
+        <div class="font-display font-semibold tabular text-[clamp(1.8rem,4.5vw,2.75rem)] text-[var(--mint)]">33%</div>
+        <p class="mt-2 text-xs sm:text-sm text-[var(--text-muted)] leading-snug">reduction in administrative overhead</p>
+      </div>
+      <div class="px-4 sm:px-8">
+        <div class="font-display font-semibold tabular text-[clamp(1.8rem,4.5vw,2.75rem)] text-[var(--teal)]">80%</div>
+        <p class="mt-2 text-xs sm:text-sm text-[var(--text-muted)] leading-snug">reduction in system vulnerabilities</p>
+      </div>
+      <div class="pl-4 sm:pl-8">
+        <div class="font-display font-semibold tabular text-[clamp(1.8rem,4.5vw,2.75rem)] text-[var(--mint)]">100%</div>
+        <p class="mt-2 text-xs sm:text-sm text-[var(--text-muted)] leading-snug">audit compliance sustained</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="max-w-5xl mx-auto px-6 sm:px-8 py-20 sm:py-28">
+  <div class="mb-14 max-w-2xl">
+    <h2 class="font-display font-medium text-2xl sm:text-3xl">Professional experience</h2>
+    <p class="mt-3 text-[var(--text-muted)] text-[15px] leading-relaxed">
+      Seven roles across federal contracting, higher education, and enterprise IT — each one adding
+      a layer of operational or compliance responsibility.
+    </p>
+  </div>
+
+  <div class="relative pl-8 sm:pl-10">
+
+    <div class="trace-item relative pb-14">
+      <span class="trace-line"></span><span class="trace-node"></span>
+      <div class="role-card pt-6">
+        <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+          <h3 class="font-display font-medium text-lg text-[var(--text)]">Expert Systems Engineer</h3>
+          <span class="text-xs text-[var(--text-dim)] tabular">Nov 2022 — Present</span>
+        </div>
+        <p class="text-sm text-[var(--teal)] mt-1">Vanjure LLC</p>
+        <p class="mt-3 text-sm text-[var(--text-muted)] leading-relaxed max-w-xl">
+          Owns systems engineering and infrastructure delivery for enterprise clients, translating
+          operational requirements into resilient, compliant technical architecture.
+        </p>
+      </div>
+    </div>
+
+    <div class="trace-item relative pb-14">
+      <span class="trace-line"></span><span class="trace-node"></span>
+      <div class="role-card pt-6">
+        <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+          <h3 class="font-display font-medium text-lg text-[var(--text)]">SAP Field Systems Administrator III</h3>
+          <span class="text-xs text-[var(--text-dim)] tabular">Nov 2019 — Nov 2022</span>
+        </div>
+        <p class="text-sm text-[var(--teal)] mt-1">AIM Innovations LLC</p>
+        <ul class="mt-3 space-y-1.5 text-sm text-[var(--text-muted)] leading-relaxed max-w-xl">
+          <li class="flex gap-2"><i class="fa-solid fa-check text-[var(--mint)] text-xs mt-1.5"></i>Cut administrative overhead by 33% through process consolidation.</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-[var(--mint)] text-xs mt-1.5"></i>Reduced system vulnerabilities by 80% via hardening and patch discipline.</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-[var(--mint)] text-xs mt-1.5"></i>Sustained 100% audit compliance across the administration cycle.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="trace-item relative pb-14">
+      <span class="trace-line"></span><span class="trace-node"></span>
+      <div class="role-card pt-6">
+        <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+          <h3 class="font-display font-medium text-lg text-[var(--text)]">Senior Mission Support Officer</h3>
+          <span class="text-xs text-[var(--text-dim)] tabular">Aug 2018 — Nov 2019</span>
+        </div>
+        <p class="text-sm text-[var(--teal)] mt-1">TPGS Federal</p>
+        <p class="mt-3 text-sm text-[var(--text-muted)] leading-relaxed max-w-xl">
+          Supported federal mission operations, coordinating logistics and administrative readiness
+          across program teams.
+        </p>
+      </div>
+    </div>
+
+    <div class="trace-item relative pb-14">
+      <span class="trace-line"></span><span class="trace-node"></span>
+      <div class="role-card pt-6">
+        <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+          <h3 class="font-display font-medium text-lg text-[var(--text)]">All-Source Analyst, Watch Listing</h3>
+          <span class="text-xs text-[var(--text-dim)] tabular">Jun 2018 — Aug 2018</span>
+        </div>
+        <p class="text-sm text-[var(--teal)] mt-1">BAE Systems</p>
+        <p class="mt-3 text-sm text-[var(--text-muted)] leading-relaxed max-w-xl">
+          Synthesized multi-source data into watch-list analysis products for federal review.
+        </p>
+      </div>
+    </div>
+
+    <div class="trace-item relative pb-14">
+      <span class="trace-line"></span><span class="trace-node"></span>
+      <div class="role-card pt-6">
+        <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+          <h3 class="font-display font-medium text-lg text-[var(--text)]">Access Control Specialist</h3>
+          <span class="text-xs text-[var(--text-dim)] tabular">Sep 2017 — Jun 2018</span>
+        </div>
+        <p class="text-sm text-[var(--teal)] mt-1">Cencore LLC</p>
+        <p class="mt-3 text-sm text-[var(--text-muted)] leading-relaxed max-w-xl">
+          Managed physical and systems access control protocols for a secure facility environment.
+        </p>
+      </div>
+    </div>
+
+    <div class="trace-item relative pb-14">
+      <span class="trace-line"></span><span class="trace-node"></span>
+      <div class="role-card pt-6">
+        <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+          <h3 class="font-display font-medium text-lg text-[var(--text)]">Technical Office Assistant III</h3>
+          <span class="text-xs text-[var(--text-dim)] tabular">Jan 2014 — Sep 2017</span>
+        </div>
+        <p class="text-sm text-[var(--teal)] mt-1">George Mason University</p>
+        <p class="mt-3 text-sm text-[var(--text-muted)] leading-relaxed max-w-xl">
+          Provided technical and administrative office support across a multi-year appointment,
+          building the operational foundation for later systems and compliance work.
+        </p>
+      </div>
+    </div>
+
+    <div class="trace-item relative pb-2">
+      <span class="trace-line"></span><span class="trace-node"></span>
+      <div class="role-card pt-6">
+        <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+          <h3 class="font-display font-medium text-lg text-[var(--text)]">Assistant Program &amp; University Organizer</h3>
+          <span class="text-xs text-[var(--text-dim)] tabular">Aug 2015 — Dec 2015</span>
+        </div>
+        <p class="text-sm text-[var(--teal)] mt-1">George Mason University — South Korea</p>
+        <p class="mt-3 text-sm text-[var(--text-muted)] leading-relaxed max-w-xl">
+          Organized program logistics for GMU's Songdo, South Korea campus — an early cross-border
+          operations posting, concurrent with the Technical Office Assistant appointment.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- COMPETENCIES -->
+<section id="competencies" class="border-y border-[var(--line-soft)] bg-[var(--bg-raised)]">
+  <div class="max-w-5xl mx-auto px-6 sm:px-8 py-20 sm:py-28">
+    <div class="mb-14 max-w-2xl">
+      <h2 class="font-display font-medium text-2xl sm:text-3xl">Where systems thinking meets policy</h2>
+      <p class="mt-3 text-[var(--text-muted)] text-[15px] leading-relaxed">
+        Two skill sets, one operating style: build the infrastructure, understand the rules it has
+        to comply with.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 sm:divide-x divide-[var(--line)]">
+      <div class="sm:pr-10 pb-10 sm:pb-0">
+        <h3 class="font-display text-sm text-[var(--teal)] mb-5">Systems &amp; infrastructure</h3>
+        <div>
+          <div class="skill-row flex items-center gap-3 py-3">
+            <i class="fa-solid fa-server text-[var(--teal)] w-5 text-center"></i>
+            <span class="text-sm text-[var(--text)]">Enterprise infrastructure &amp; SAP field administration</span>
+          </div>
+          <div class="skill-row flex items-center gap-3 py-3">
+            <i class="fa-solid fa-shield-halved text-[var(--teal)] w-5 text-center"></i>
+            <span class="text-sm text-[var(--text)]">Cybersecurity hardening &amp; vulnerability reduction</span>
+          </div>
+          <div class="skill-row flex items-center gap-3 py-3">
+            <i class="fa-solid fa-cloud text-[var(--teal)] w-5 text-center"></i>
+            <span class="text-sm text-[var(--text)]">Cloud operations (AWS)</span>
+          </div>
+          <div class="skill-row flex items-center gap-3 py-3">
+            <i class="fa-solid fa-clipboard-check text-[var(--teal)] w-5 text-center"></i>
+            <span class="text-sm text-[var(--text)]">Compliance frameworks &amp; audit readiness</span>
+          </div>
+          <div class="skill-row flex items-center gap-3 py-3">
+            <i class="fa-solid fa-diagram-project text-[var(--teal)] w-5 text-center"></i>
+            <span class="text-sm text-[var(--text)]">IT service management (ITIL4)</span>
+          </div>
+          <div class="skill-row flex items-center gap-3 py-3">
+            <i class="fa-solid fa-list-check text-[var(--teal)] w-5 text-center"></i>
+            <span class="text-sm text-[var(--text)]">Cross-functional program delivery</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sm:pl-10 pt-10 sm:pt-0">
+        <h3 class="font-display text-sm text-[var(--mint)] mb-5">Climate &amp; governance</h3>
+        <div>
+          <div class="skill-row flex items-center gap-3 py-3">
+            <i class="fa-solid fa-earth-americas text-[var(--mint)] w-5 text-center"></i>
+            <span class="text-sm text-[var(--text)]">International climate negotiations</span>
+          </div>
+          <div class="skill-row flex items-center gap-3 py-3">
+            <i class="fa-solid fa-sack-dollar text-[var(--mint)] w-5 text-center"></i>
+            <span class="text-sm text-[var(--text)]">Climate finance &amp; scaling mechanisms</span>
+          </div>
+          <div class="skill-row flex items-center gap-3 py-3">
+            <i class="fa-solid fa-industry text-[var(--mint)] w-5 text-center"></i>
+            <span class="text-sm text-[var(--text)]">Green industrial policy</span>
+          </div>
+          <div class="skill-row flex items-center gap-3 py-3">
+            <i class="fa-solid fa-seedling text-[var(--mint)] w-5 text-center"></i>
+            <span class="text-sm text-[var(--text)]">Green economy &amp; trade (PAGE)</span>
+          </div>
+          <div class="skill-row flex items-center gap-3 py-3">
+            <i class="fa-solid fa-people-group text-[var(--mint)] w-5 text-center"></i>
+            <span class="text-sm text-[var(--text)]">Human security &amp; global governance</span>
+          </div>
+          <div class="skill-row flex items-center gap-3 py-3">
+            <i class="fa-solid fa-house-flood-water text-[var(--mint)] w-5 text-center"></i>
+            <span class="text-sm text-[var(--text)]">Emergency &amp; disaster liaison response</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="max-w-5xl mx-auto px-6 sm:px-8 py-16 sm:py-20">
+  <div class="grid sm:grid-cols-[1fr_1.4fr] gap-10 sm:gap-16">
+    <div>
+      <h2 class="font-display font-medium text-2xl sm:text-3xl">Education</h2>
+    </div>
+    <div>
+      <h3 class="font-display text-lg text-[var(--text)]">Bachelor of Arts, Global Affairs</h3>
+      <p class="text-sm text-[var(--teal)] mt-1">George Mason University</p>
+      <p class="mt-3 text-sm text-[var(--text-muted)] leading-relaxed max-w-lg">
+        Concentration in Human Security and Global Governance — the policy foundation underpinning
+        the later climate specialization below.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CREDENTIALS -->
+<section id="credentials" class="border-t border-[var(--line-soft)] bg-[var(--bg-raised-2)]/60 grain-panel">
+  <div class="max-w-5xl mx-auto px-6 sm:px-8 py-20 sm:py-28">
+
+    <div class="grid sm:grid-cols-[1fr_1.4fr] gap-10 sm:gap-16 mb-16">
+      <div>
+        <h2 class="font-display font-medium text-2xl sm:text-3xl">Climate &amp; sustainability training</h2>
+        <p class="mt-3 text-sm text-[var(--text-muted)] leading-relaxed">
+          Coursework completed through the UN's climate learning partnership.
+        </p>
+      </div>
+      <div>
+        <div class="cert-row flex flex-wrap items-baseline justify-between gap-x-4 py-3">
+          <span class="text-sm text-[var(--text)]">Mastering International Climate Negotiations</span>
+          <span class="text-xs text-[var(--text-dim)]">UN CC:e-Learn</span>
+        </div>
+        <div class="cert-row flex flex-wrap items-baseline justify-between gap-x-4 py-3">
+          <span class="text-sm text-[var(--text)]">Scaling Climate Finance</span>
+          <span class="text-xs text-[var(--text-dim)]">UN CC:e-Learn</span>
+        </div>
+        <div class="cert-row flex flex-wrap items-baseline justify-between gap-x-4 py-3">
+          <span class="text-sm text-[var(--text)]">Green Economy and Trade</span>
+          <span class="text-xs text-[var(--text-dim)]">PAGE / UN CC:e-Learn</span>
+        </div>
+        <div class="cert-row flex flex-wrap items-baseline justify-between gap-x-4 py-3">
+          <span class="text-sm text-[var(--text)]">Green Industrial Policy</span>
+          <span class="text-xs text-[var(--text-dim)]">UN CC:e-Learn</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid sm:grid-cols-[1fr_1.4fr] gap-10 sm:gap-16">
+      <div>
+        <h2 class="font-display font-medium text-2xl sm:text-3xl">Certifications</h2>
+        <p class="mt-3 text-sm text-[var(--text-muted)] leading-relaxed">
+          Active credentials spanning cloud, security, and program management.
+        </p>
+      </div>
+      <div>
+        <div class="cert-row flex flex-wrap items-baseline justify-between gap-x-4 py-3">
+          <span class="text-sm text-[var(--text)]">AWS Certified Cloud Practitioner &amp; SysOps Administrator</span>
+          <span class="text-xs text-[var(--text-dim)] tabular">2023–2026</span>
+        </div>
+        <div class="cert-row flex flex-wrap items-baseline justify-between gap-x-4 py-3">
+          <span class="text-sm text-[var(--text)]">CompTIA Security+ SY0-701</span>
+          <span class="text-xs text-[var(--text-dim)] tabular">2025–2028</span>
+        </div>
+        <div class="cert-row flex flex-wrap items-baseline justify-between gap-x-4 py-3">
+          <span class="text-sm text-[var(--text)]">Palo Alto Networks Cybersecurity Professional</span>
+          <span class="text-xs text-[var(--text-dim)] tabular">2023–2026</span>
+        </div>
+        <div class="cert-row flex flex-wrap items-baseline justify-between gap-x-4 py-3">
+          <span class="text-sm text-[var(--text)]">IT Infrastructure Library (ITIL4)</span>
+          <span class="text-xs text-[var(--text-dim)] tabular">2024–2027</span>
+        </div>
+        <div class="cert-row flex flex-wrap items-baseline justify-between gap-x-4 py-3">
+          <span class="text-sm text-[var(--text)]">Google Project Management Professional</span>
+          <span class="text-xs text-[var(--text-dim)] tabular">2022</span>
+        </div>
+        <div class="cert-row flex flex-wrap items-baseline justify-between gap-x-4 py-3">
+          <span class="text-sm text-[var(--text)]">FEMA All-Hazards Liaison Officer (L956), APS Certificate &amp; PDS</span>
+          <span class="text-xs text-[var(--text-dim)] tabular">2015–2016</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- LANGUAGES -->
+<section class="max-w-5xl mx-auto px-6 sm:px-8 py-14">
+  <div class="grid sm:grid-cols-[1fr_1.4fr] gap-10 sm:gap-16 items-baseline">
+    <h2 class="font-display font-medium text-2xl sm:text-3xl">Languages</h2>
+    <div class="flex flex-wrap gap-x-10 gap-y-2 text-sm text-[var(--text-muted)]">
+      <span><span class="text-[var(--text)]">English</span> — Native</span>
+      <span><span class="text-[var(--text)]">Korean</span> — Intermediate</span>
+      <span><span class="text-[var(--text)]">Tagalog</span> — Intermediate</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT / FOOTER -->
+<footer id="contact" class="border-t border-[var(--line-soft)]">
+  <div class="max-w-5xl mx-auto px-6 sm:px-8 py-20 sm:py-24">
+    <h2 class="font-display font-medium text-[clamp(1.6rem,4vw,2.6rem)] max-w-2xl leading-tight">
+      Building the operational backbone for climate work that needs one.
+    </h2>
+    <div class="mt-10 flex flex-wrap gap-x-10 gap-y-4 text-sm">
+      <a href="mailto:won93lee@proton.me" class="flex items-center gap-2 underline-link">
+        <i class="fa-solid fa-envelope text-[var(--teal)]"></i> won93lee@proton.me
+      </a>
+      <a href="tel:14349603542" class="flex items-center gap-2 underline-link">
+        <i class="fa-solid fa-phone text-[var(--teal)]"></i> 434-960-3542
+      </a>
+      <span class="flex items-center gap-2 text-[var(--text-muted)]">
+        <i class="fa-solid fa-location-dot text-[var(--teal)]"></i> Fairfax, Virginia
+      </span>
+    </div>
+    <p class="mt-16 text-xs text-[var(--text-dim)]">Harold Flores</p>
+  </div>
+</footer>
+
 </body>
 </html>
