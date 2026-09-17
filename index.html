@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harold Flores | Operations & Climate Governance Leader</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0b1524 0%, #1a2a3a 100%);
+            color: #e1e8f0;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        header {
+            background: rgba(11, 21, 36, 0.95);
+            border-bottom: 2px solid #10b981;
+            padding: 3rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            backdrop-filter: blur(10px);
+        }
+
+        nav {
+            max-width: 6rem;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, #10b981, #14b8a6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #10b981;
+        }
+
+        .contact-btn {
+            background: #10b981;
+            color: #0b1524;
+            padding: 0.6rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .contact-btn:hover {
+            background: #059669;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(16, 185, 129, 0.2);
+        }
+
+        main {
+            max-width: 6rem;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        section {
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #10b981;
+            border-bottom: 2px solid #10b981;
+            padding-bottom: 0.8rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #10b981, #14b8a6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p.subtitle {
+            font-size: 1.3rem;
+            color: #94a3b8;
+            margin-bottom: 1rem;
+        }
+
+        .status-badge {
+            display: inline-block;
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid #10b981;
+            color: #10b981;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .summary {
+            background: rgba(30, 41, 59, 0.5);
+            border-left: 3px solid #10b981;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            color: #cbd5e1;
+            line-height: 1.8;
+        }
+
+        .competencies {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .competency {
+            background: rgba(30, 41, 59, 0.5);
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border-left: 3px solid #10b981;
+        }
+
+        .competency strong {
+            color: #10b981;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .job-entry {
+            margin-bottom: 2.5rem;
+            background: rgba(30, 41, 59, 0.3);
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            border-left: 3px solid #14b8a6;
+        }
+
+        .job-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #f1f5f9;
+            margin-bottom: 0.3rem;
+        }
+
+        .company {
+            color: #10b981;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .duration {
+            font-size: 0.9rem;
+            color: #64748b;
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .job-description {
+            list-style: none;
+            padding: 0;
+        }
+
+        .job-description li {
+            padding-left: 1.5rem;
+            margin-bottom: 0.7rem;
+            position: relative;
+            color: #cbd5e1;
+            line-height: 1.6;
+        }
+
+        .job-description li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+        }
+
+        .skill-category {
+            margin-bottom: 1.2rem;
+        }
+
+        .skill-category strong {
+            color: #10b981;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .skill-category span {
+            color: #cbd5e1;
+        }
+
+        .certification-list {
+            columns: 2;
+            column-gap: 2rem;
+        }
+
+        .certification-list li {
+            list-style: none;
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.7rem;
+            color: #cbd5e1;
+            break-inside: avoid;
+        }
+
+        .certification-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+        }
+
+        .education-entry {
+            background: rgba(30, 41, 59, 0.3);
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            border-left: 3px solid #14b8a6;
+            margin-bottom: 1.5rem;
+        }
+
+        .education-entry h3 {
+            color: #f1f5f9;
+            margin-bottom: 0.5rem;
+        }
+
+        .education-entry p {
+            color: #cbd5e1;
+            margin-bottom: 0.3rem;
+        }
+
+        .degree-type {
+            color: #10b981;
+            font-weight: 600;
+        }
+
+        footer {
+            background: rgba(11, 21, 36, 0.95);
+            border-top: 2px solid #10b981;
+            padding: 2rem;
+            text-align: center;
+            color: #64748b;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .certification-list {
+                columns: 1;
+            }
+
+            main {
+                padding: 1.5rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">HF</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="mailto:won93lee@proton.me" class="contact-btn">Get In Touch</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="about">
+            <h1>HAROLD FLORES</h1>
+            <p class="subtitle">Operations & Climate Governance Leader</p>
+            <div class="status-badge">🟢 Available for Executive Climate & Operations Roles</div>
+        </section>
+
+        <!-- Professional Summary -->
+        <section>
+            <h2 class="section-title">Professional Summary</h2>
+            <p class="summary">
+                Operations and governance leader with 10+ years managing enterprise infrastructure, compliance frameworks, and cross-functional program delivery for regulated organizations across the U.S. and Asia. BA in Global Affairs (Human Security & Global Governance), with specialized training in climate finance and international climate negotiations. Known for strategic planning, operational risk management, multi-stakeholder coordination, and results-based accountability in complex international environments. Seeking to apply technical systems knowledge and policy-level climate expertise to executive functions at mission-driven climate and sustainable development institutions, focusing on portfolio governance and strategic impact measurement.
+            </p>
+        </section>
+
+        <!-- Core Competencies -->
+        <section>
+            <h2 class="section-title">Core Competencies</h2>
+            <div class="competencies">
+                <div class="competency">
+                    <strong>Program Governance</strong>
+                    <span>Strategic planning & operational risk</span>
+                </div>
+                <div class="competency">
+                    <strong>Team Leadership</strong>
+                    <span>Cross-functional coordination</span>
+                </div>
+                <div class="competency">
+                    <strong>Compliance & Audit</strong>
+                    <span>Regulatory framework management</span>
+                </div>
+                <div class="competency">
+                    <strong>Executive Advisory</strong>
+                    <span>Strategic briefings & analysis</span>
+                </div>
+                <div class="competency">
+                    <strong>Resource Optimization</strong>
+                    <span>Procurement & budgeting</span>
+                </div>
+                <div class="competency">
+                    <strong>Data Analysis</strong>
+                    <span>Institutional reporting</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills -->
+        <section id="skills">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skill-category">
+                <strong>Project Management</strong>
+                <span>Jira, Confluence, ServiceNow</span>
+            </div>
+            <div class="skill-category">
+                <strong>Enterprise Systems</strong>
+                <span>Citrix VDI, Nutanix HCI, VMware, NetScaler, Active Directory</span>
+            </div>
+            <div class="skill-category">
+                <strong>Automation & Reporting</strong>
+                <span>PowerShell, CI/CD Workflows, Configuration Management</span>
+            </div>
+            <div class="skill-category">
+                <strong>Office Ecosystem</strong>
+                <span>MS Office Suite (Excel, PowerPoint, Visio, SharePoint)</span>
+            </div>
+        </section>
+
+        <!-- Professional Experience -->
+        <section id="experience">
+            <h2 class="section-title">Professional Experience</h2>
+
+            <div class="job-entry">
+                <div class="job-title">Expert Systems Engineer</div>
+                <div class="company">Vanjure LLC — Virginia</div>
+                <div class="duration">Nov 2022 – Present</div>
+                <ul class="job-description">
+                    <li>Advise large-scale enterprise clients on translating infrastructural and governance requirements into strategic action plans aligned with organizational objectives</li>
+                    <li>Coordinate across security, operations, risk mitigation, and procurement teams to maintain full compliance with institutional governance frameworks</li>
+                    <li>Manage infrastructure lifecycle operations including capacity planning, patching schedules, and version updates across organizational frameworks</li>
+                    <li>Administer secure access ecosystems, enforcing security controls and zero-trust protocols with identity authentication management</li>
+                    <li>Track service-delivery workflows using enterprise software to maintain transparency and coordinate project timelines</li>
+                </ul>
+            </div>
+
+            <div class="job-entry">
+                <div class="job-title">Specialized Access Programs Systems Administrator III</div>
+                <div class="company">AIM Innovations LLC — Virginia</div>
+                <div class="duration">Nov 2019 – Nov 2022</div>
+                <ul class="job-description">
+                    <li>Led multi-site operational overhauls and remote system remediation during high-pressure transitions, ensuring business continuity and resource protection across regional sites</li>
+                    <li>Headed internal compliance teams as senior technical escalation lead, resolving operational variances to achieve zero non-compliance findings across third-party audits</li>
+                    <li>Built automated configuration frameworks and performance baselines, reducing administrative overhead by 33% and vulnerability metrics by 80%</li>
+                    <li>Designed security configurations across network layers, implementing identity access policies to protect mission-critical data</li>
+                    <li>Coordinated multi-million dollar asset procurement pipelines and logistics per organizational guidelines</li>
+                </ul>
+            </div>
+
+            <div class="job-entry">
+                <div class="job-title">Senior Mission Support Officer</div>
+                <div class="company">TPGS Federal — Virginia</div>
+                <div class="duration">Aug 2018 – Nov 2019</div>
+                <ul class="job-description">
+                    <li>Wrote senior-level briefings and analytical reports for executive decision-makers, ensuring technical accuracy and alignment with policy priorities</li>
+                    <li>Managed project lifecycles and coordinated cross-functional workflows using enterprise governance tools to maximize operational visibility</li>
+                    <li>Controlled financial documentation, asset procurement, and international mobility tracking to support continuous operations</li>
+                </ul>
+            </div>
+
+            <div class="job-entry">
+                <div class="job-title">Technical Office Assistant III</div>
+                <div class="company">George Mason University — Virginia</div>
+                <div class="duration">Jan 2014 – Sep 2017</div>
+                <ul class="job-description">
+                    <li>Administered campus-wide cloud architecture and Oracle-based institutional databases, maintaining system availability for high-volume student transactions</li>
+                    <li>Deployed and maintained critical technology portfolios and infrastructure across multi-site academic facilities</li>
+                    <li>Partnered with engineering teams to implement predictive system monitoring, maintaining SLAs in high-demand environments</li>
+                </ul>
+            </div>
+
+            <div class="job-entry">
+                <div class="job-title">Assistant Program & University Organizer</div>
+                <div class="company">George Mason University — South Korea</div>
+                <div class="duration">Aug 2015 – Dec 2015</div>
+                <ul class="job-description">
+                    <li>Verified cross-border documentation (DS-160) for international students, ensuring compliance with federal and international regulatory requirements</li>
+                    <li>Liaised between domestic offices and international teams, facilitating diplomatic appointments with the U.S. Embassy and coordinating cross-border institutional events</li>
+                    <li>Led orientation programs and outreach initiatives to support international student integration and operational efficiency</li>
+                </ul>
+            </div>
+
+            <div class="job-entry">
+                <div class="job-title">All-Source Analyst, Watch Listing</div>
+                <div class="company">BAE Systems — Virginia</div>
+                <div class="duration">Jun 2018 – Aug 2018</div>
+                <ul class="job-description">
+                    <li>Ran database queries and thematic analysis to identify risk trends, mapping operational profiles into tracking systems</li>
+                    <li>Synthesized information sources to track emerging patterns, providing actionable intelligence to leadership</li>
+                </ul>
+            </div>
+
+            <div class="job-entry">
+                <div class="job-title">Access Control Specialist</div>
+                <div class="company">Cencore LLC — Maryland</div>
+                <div class="duration">Sep 2017 – Jun 2018</div>
+                <ul class="job-description">
+                    <li>Determined organizational access eligibility, collaborating with oversight entities to ensure compliance with policy frameworks</li>
+                    <li>Managed sensitive credentials and verification profiles, enforcing data accuracy and secure tracking procedures</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section>
+            <h2 class="section-title">Education</h2>
+            <div class="education-entry">
+                <h3>George Mason University — Fairfax, VA</h3>
+                <p><span class="degree-type">Bachelor of Arts in Global Affairs</span></p>
+                <p>Concentration: Human Security & Global Governance | Minor: Intelligence Analysis</p>
+                <p style="font-style: italic; color: #94a3b8; margin-top: 0.5rem;">Study Abroad: George Mason Korea, Songdo, Incheon (Aug 2015 – Jul 2016)</p>
+            </div>
+        </section>
+
+        <!-- Intellectual Property -->
+        <section>
+            <h2 class="section-title">Intellectual Property</h2>
+            <p><strong>Patent Pending:</strong> "Electrochemical-assisted chelation of critical minerals from solid-state slurries"</p>
+            <p style="color: #94a3b8; margin-top: 0.5rem;">United States Patent and Trademark Office (USPTO), submitted 2026</p>
+        </section>
+
+        <!-- Climate & Sustainability Training -->
+        <section>
+            <h2 class="section-title">Climate & Sustainability Training</h2>
+            <ul class="job-description">
+                <li>Mastering International Climate Negotiations — UN CC:e-Learn</li>
+                <li>Scaling Climate Finance — UN CC:e-Learn</li>
+                <li>Green Economy and Trade — PAGE / UN CC:e-Learn</li>
+                <li>Green Industrial Policy: Competitiveness and Structural Transformation — UN CC:e-Learn</li>
+            </ul>
+        </section>
+
+        <!-- Certifications -->
+        <section>
+            <h2 class="section-title">Certifications</h2>
+            <ul class="certification-list">
+                <li>AWS Certified Cloud Practitioner (2023–2026)</li>
+                <li>AWS Certified SysOps Administrator (2023–2026)</li>
+                <li>CompTIA Security+ SY0-701 (2025–2028)</li>
+                <li>Palo Alto Networks Cybersecurity Professional (2023–2026)</li>
+                <li>IT Infrastructure Library (ITIL4) (2024–2027)</li>
+                <li>Google Project Management Professional (2022)</li>
+                <li>FEMA All-Hazards Liaison Officer L956 (2016)</li>
+                <li>FEMA Advanced Professional Series Certificate (2016)</li>
+                <li>FEMA Professional Development Series (2015)</li>
+            </ul>
+        </section>
+
+        <!-- Languages -->
+        <section>
+            <h2 class="section-title">Languages</h2>
+            <div class="skill-category">
+                <strong>English</strong>
+                <span>Native/Fluent</span>
+            </div>
+            <div class="skill-category">
+                <strong>Korean</strong>
+                <span>Intermediate</span>
+            </div>
+            <div class="skill-category">
+                <strong>Tagalog</strong>
+                <span>Intermediate</span>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact">
+            <h2 class="section-title">Get In Touch</h2>
+            <p>I'm always interested in exploring opportunities in climate governance, operations leadership, and strategic sustainability initiatives.</p>
+            <p><strong>Email:</strong> <a href="mailto:won93lee@proton.me" style="color: #10b981; text-decoration: none;">won93lee@proton.me</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Harold Flores. Built with HTML & CSS.</p>
+    </footer>
+</body>
+</html>
