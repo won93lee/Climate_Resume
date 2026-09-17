@@ -56,8 +56,8 @@
 
   /* circuit-trace timeline */
   .trace-line{
-    position:absolute;left:0;top:0.55rem;bottom:-2.25rem;width:1px;
-    background:linear-gradient(to bottom, var(--line) 0%, var(--line) 100%);
+    position:absolute;left:0;top:0.55rem;bottom:-2rem;width:1px;
+    background:var(--line);
   }
   .trace-node{
     width:9px;height:9px;background:var(--bg);border:1.5px solid var(--teal);
@@ -78,7 +78,12 @@
   .cert-row{border-bottom:1px solid var(--line-soft);}
   .cert-row:last-child{border-bottom:none;}
 
-  .stat-divider{border-left:1px solid var(--line);}
+  .tool-chip{
+    border:1px solid var(--line);
+    color:var(--text-muted);
+    transition:border-color .2s ease, color .2s ease;
+  }
+  .tool-chip:hover{border-color:var(--teal-dim);color:var(--text);}
 
   a.underline-link{
     text-decoration:underline;
@@ -129,9 +134,13 @@
     Harold Flores manages enterprise infrastructure, compliance frameworks, and cross-functional
     program delivery for regulated organizations across the U.S. and Asia. A Bachelor's in Global
     Affairs — concentrated in Human Security and Global Governance — sits alongside specialized
-    training in climate finance, green industrial policy, and international climate negotiations.
-    The goal: executive-level roles at mission-driven climate and sustainable-development institutions
-    that need someone who can operate the machinery, not just advocate for it.
+    training in climate finance, green industrial policy, and international climate negotiations,
+    plus demonstrated expertise in strategic planning, operational risk management, multi-stakeholder
+    coordination, and results-based accountability in complex international environments.
+  </p>
+  <p class="mt-4 max-w-2xl text-[var(--text-muted)] leading-relaxed text-[15px] sm:text-base">
+    The goal: executive functions at mission-driven climate and sustainable-development institutions —
+    with a focus on portfolio governance, resource mobilization support, and strategic impact measurement.
   </p>
 
   <div class="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-[var(--text-muted)]">
@@ -160,11 +169,11 @@
       </div>
       <div class="px-4 sm:px-8">
         <div class="font-display font-semibold tabular text-[clamp(1.8rem,4.5vw,2.75rem)] text-[var(--teal)]">80%</div>
-        <p class="mt-2 text-xs sm:text-sm text-[var(--text-muted)] leading-snug">reduction in system vulnerabilities</p>
+        <p class="mt-2 text-xs sm:text-sm text-[var(--text-muted)] leading-snug">reduction in vulnerability metrics</p>
       </div>
       <div class="pl-4 sm:pl-8">
-        <div class="font-display font-semibold tabular text-[clamp(1.8rem,4.5vw,2.75rem)] text-[var(--mint)]">100%</div>
-        <p class="mt-2 text-xs sm:text-sm text-[var(--text-muted)] leading-snug">audit compliance sustained</p>
+        <div class="font-display font-semibold tabular text-[clamp(1.8rem,4.5vw,2.75rem)] text-[var(--mint)]">0</div>
+        <p class="mt-2 text-xs sm:text-sm text-[var(--text-muted)] leading-snug">non-compliance findings across third-party audits</p>
       </div>
     </div>
   </div>
@@ -189,11 +198,14 @@
           <h3 class="font-display font-medium text-lg text-[var(--text)]">Expert Systems Engineer</h3>
           <span class="text-xs text-[var(--text-dim)] tabular">Nov 2022 — Present</span>
         </div>
-        <p class="text-sm text-[var(--teal)] mt-1">Vanjure LLC</p>
-        <p class="mt-3 text-sm text-[var(--text-muted)] leading-relaxed max-w-xl">
-          Owns systems engineering and infrastructure delivery for enterprise clients, translating
-          operational requirements into resilient, compliant technical architecture.
-        </p>
+        <p class="text-sm text-[var(--teal)] mt-1">Vanjure LLC — Virginia</p>
+        <ul class="mt-3 space-y-1.5 text-sm text-[var(--text-muted)] leading-relaxed max-w-xl">
+          <li class="flex gap-2"><i class="fa-solid fa-check text-[var(--mint)] text-xs mt-1.5"></i>Serves as primary operational advisor for large-scale enterprise clients, translating infrastructural and governance requirements into result-oriented strategic action plans.</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-[var(--mint)] text-xs mt-1.5"></i>Leads cross-functional coordination between security, operations, risk mitigation, and asset procurement teams, guaranteeing 100% alignment with institutional compliance frameworks.</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-[var(--mint)] text-xs mt-1.5"></i>Orchestrates end-to-end infrastructure lifecycle operations — capacity planning, resource optimization, patching schedules, and version updates across the organization.</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-[var(--mint)] text-xs mt-1.5"></i>Manages secure access ecosystems, enforcing zero-trust framework protocols and identity authentication matrices.</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-[var(--mint)] text-xs mt-1.5"></i>Supervises distributed service-delivery tracking pipelines to maintain transparency and coordinate project sprints across technical workflows.</li>
+        </ul>
       </div>
     </div>
 
@@ -204,11 +216,13 @@
           <h3 class="font-display font-medium text-lg text-[var(--text)]">SAP Field Systems Administrator III</h3>
           <span class="text-xs text-[var(--text-dim)] tabular">Nov 2019 — Nov 2022</span>
         </div>
-        <p class="text-sm text-[var(--teal)] mt-1">AIM Innovations LLC</p>
+        <p class="text-sm text-[var(--teal)] mt-1">AIM Innovations LLC — Virginia</p>
         <ul class="mt-3 space-y-1.5 text-sm text-[var(--text-muted)] leading-relaxed max-w-xl">
-          <li class="flex gap-2"><i class="fa-solid fa-check text-[var(--mint)] text-xs mt-1.5"></i>Cut administrative overhead by 33% through process consolidation.</li>
-          <li class="flex gap-2"><i class="fa-solid fa-check text-[var(--mint)] text-xs mt-1.5"></i>Reduced system vulnerabilities by 80% via hardening and patch discipline.</li>
-          <li class="flex gap-2"><i class="fa-solid fa-check text-[var(--mint)] text-xs mt-1.5"></i>Sustained 100% audit compliance across the administration cycle.</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-[var(--mint)] text-xs mt-1.5"></i>Directed multi-site operational overhauls and remote systems remediation during high-pressure transitions, ensuring 100% business continuity and system stability.</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-[var(--mint)] text-xs mt-1.5"></i>Headed internal compliance alignment as senior technical escalation lead, resolving operational variances to achieve zero non-compliance findings across third-party audits.</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-[var(--mint)] text-xs mt-1.5"></i>Engineered automated configuration frameworks and performance baselines, reducing administrative overhead by 33% and vulnerability metrics by 80%.</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-[var(--mint)] text-xs mt-1.5"></i>Designed end-to-end security configurations across large network layers, implementing strict identity access policies to safeguard mission-critical data.</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-[var(--mint)] text-xs mt-1.5"></i>Coordinated multi-million dollar asset procurement pipelines and logistics, reinforcing data accuracy and long-term continuity.</li>
         </ul>
       </div>
     </div>
@@ -220,39 +234,12 @@
           <h3 class="font-display font-medium text-lg text-[var(--text)]">Senior Mission Support Officer</h3>
           <span class="text-xs text-[var(--text-dim)] tabular">Aug 2018 — Nov 2019</span>
         </div>
-        <p class="text-sm text-[var(--teal)] mt-1">TPGS Federal</p>
-        <p class="mt-3 text-sm text-[var(--text-muted)] leading-relaxed max-w-xl">
-          Supported federal mission operations, coordinating logistics and administrative readiness
-          across program teams.
-        </p>
-      </div>
-    </div>
-
-    <div class="trace-item relative pb-14">
-      <span class="trace-line"></span><span class="trace-node"></span>
-      <div class="role-card pt-6">
-        <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-          <h3 class="font-display font-medium text-lg text-[var(--text)]">All-Source Analyst, Watch Listing</h3>
-          <span class="text-xs text-[var(--text-dim)] tabular">Jun 2018 — Aug 2018</span>
-        </div>
-        <p class="text-sm text-[var(--teal)] mt-1">BAE Systems</p>
-        <p class="mt-3 text-sm text-[var(--text-muted)] leading-relaxed max-w-xl">
-          Synthesized multi-source data into watch-list analysis products for federal review.
-        </p>
-      </div>
-    </div>
-
-    <div class="trace-item relative pb-14">
-      <span class="trace-line"></span><span class="trace-node"></span>
-      <div class="role-card pt-6">
-        <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-          <h3 class="font-display font-medium text-lg text-[var(--text)]">Access Control Specialist</h3>
-          <span class="text-xs text-[var(--text-dim)] tabular">Sep 2017 — Jun 2018</span>
-        </div>
-        <p class="text-sm text-[var(--teal)] mt-1">Cencore LLC</p>
-        <p class="mt-3 text-sm text-[var(--text-muted)] leading-relaxed max-w-xl">
-          Managed physical and systems access control protocols for a secure facility environment.
-        </p>
+        <p class="text-sm text-[var(--teal)] mt-1">TPGS Federal — Virginia</p>
+        <ul class="mt-3 space-y-1.5 text-sm text-[var(--text-muted)] leading-relaxed max-w-xl">
+          <li class="flex gap-2"><i class="fa-solid fa-check text-[var(--mint)] text-xs mt-1.5"></i>Authored senior-level briefings, analytical assessments, and tactical reports for executive decision-makers, ensuring technical precision and policy alignment.</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-[var(--mint)] text-xs mt-1.5"></i>Managed complex project lifecycles and cross-functional work pipelines using enterprise governance tracking tools to maximize transparency across parallel schedules.</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-[var(--mint)] text-xs mt-1.5"></i>Controlled financial documentation pipelines, asset procurement logistics, and international mobility tracking to support risk-resistant operations.</li>
+        </ul>
       </div>
     </div>
 
@@ -263,15 +250,16 @@
           <h3 class="font-display font-medium text-lg text-[var(--text)]">Technical Office Assistant III</h3>
           <span class="text-xs text-[var(--text-dim)] tabular">Jan 2014 — Sep 2017</span>
         </div>
-        <p class="text-sm text-[var(--teal)] mt-1">George Mason University</p>
-        <p class="mt-3 text-sm text-[var(--text-muted)] leading-relaxed max-w-xl">
-          Provided technical and administrative office support across a multi-year appointment,
-          building the operational foundation for later systems and compliance work.
-        </p>
+        <p class="text-sm text-[var(--teal)] mt-1">George Mason University — Virginia</p>
+        <ul class="mt-3 space-y-1.5 text-sm text-[var(--text-muted)] leading-relaxed max-w-xl">
+          <li class="flex gap-2"><i class="fa-solid fa-check text-[var(--mint)] text-xs mt-1.5"></i>Administered campus-wide cloud architecture and Oracle-based institutional databases, driving system availability and security for high-volume student transaction systems.</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-[var(--mint)] text-xs mt-1.5"></i>Coordinated deployment, life-cycle auditing, and maintenance of critical technology portfolios across multi-site academic spaces.</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-[var(--mint)] text-xs mt-1.5"></i>Partnered with cross-functional engineering teams to implement predictive uptime monitoring, maintaining strict SLAs and scalability benchmarks.</li>
+        </ul>
       </div>
     </div>
 
-    <div class="trace-item relative pb-2">
+    <div class="trace-item relative pb-14">
       <span class="trace-line"></span><span class="trace-node"></span>
       <div class="role-card pt-6">
         <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
@@ -279,84 +267,139 @@
           <span class="text-xs text-[var(--text-dim)] tabular">Aug 2015 — Dec 2015</span>
         </div>
         <p class="text-sm text-[var(--teal)] mt-1">George Mason University — South Korea</p>
-        <p class="mt-3 text-sm text-[var(--text-muted)] leading-relaxed max-w-xl">
-          Organized program logistics for GMU's Songdo, South Korea campus — an early cross-border
-          operations posting, concurrent with the Technical Office Assistant appointment.
-        </p>
+        <ul class="mt-3 space-y-1.5 text-sm text-[var(--text-muted)] leading-relaxed max-w-xl">
+          <li class="flex gap-2"><i class="fa-solid fa-check text-[var(--mint)] text-xs mt-1.5"></i>Managed and verified cross-border documentation (DS-160) for international populations, ensuring 100% adherence to federal and international regulatory frameworks.</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-[var(--mint)] text-xs mt-1.5"></i>Acted as primary operations liaison between domestic academic offices and international teams, facilitating diplomatic appointments with the U.S. Embassy.</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-[var(--mint)] text-xs mt-1.5"></i>Spearheaded orientation frameworks and outreach initiatives to optimize international integration and operational efficiency.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="trace-item relative pb-14">
+      <span class="trace-line"></span><span class="trace-node"></span>
+      <div class="role-card pt-6">
+        <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+          <h3 class="font-display font-medium text-lg text-[var(--text)]">All-Source Analyst, Watch Listing</h3>
+          <span class="text-xs text-[var(--text-dim)] tabular">Jun 2018 — Aug 2018</span>
+        </div>
+        <p class="text-sm text-[var(--teal)] mt-1">BAE Systems — Virginia</p>
+        <ul class="mt-3 space-y-1.5 text-sm text-[var(--text-muted)] leading-relaxed max-w-xl">
+          <li class="flex gap-2"><i class="fa-solid fa-check text-[var(--mint)] text-xs mt-1.5"></i>Conducted complex database queries and thematic data analysis to identify and categorize risk trends, mapping operational profiles into tracking matrix applications.</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-[var(--mint)] text-xs mt-1.5"></i>Synthesized cross-functional information sources to track emerging patterns, providing actionable data to leadership in support of strategic readiness.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="trace-item relative pb-2">
+      <span class="trace-line"></span><span class="trace-node"></span>
+      <div class="role-card pt-6">
+        <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+          <h3 class="font-display font-medium text-lg text-[var(--text)]">Access Control Specialist</h3>
+          <span class="text-xs text-[var(--text-dim)] tabular">Sep 2017 — Jun 2018</span>
+        </div>
+        <p class="text-sm text-[var(--teal)] mt-1">Cencore LLC — Maryland</p>
+        <ul class="mt-3 space-y-1.5 text-sm text-[var(--text-muted)] leading-relaxed max-w-xl">
+          <li class="flex gap-2"><i class="fa-solid fa-check text-[var(--mint)] text-xs mt-1.5"></i>Coordinated access eligibility determinations, collaborating with cross-functional oversight entities to ensure personnel and system compliance with organizational policy.</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-[var(--mint)] text-xs mt-1.5"></i>Supervised the full lifecycle of sensitive credentials and verification profiles, enforcing rigorous data accuracy, secure tracking, and lifecycle destruction criteria.</li>
+        </ul>
       </div>
     </div>
 
   </div>
 </section>
 
-<!-- COMPETENCIES -->
+<!-- COMPETENCIES + TOOLS -->
 <section id="competencies" class="border-y border-[var(--line-soft)] bg-[var(--bg-raised)]">
   <div class="max-w-5xl mx-auto px-6 sm:px-8 py-20 sm:py-28">
     <div class="mb-14 max-w-2xl">
-      <h2 class="font-display font-medium text-2xl sm:text-3xl">Where systems thinking meets policy</h2>
+      <h2 class="font-display font-medium text-2xl sm:text-3xl">Core competencies</h2>
       <p class="mt-3 text-[var(--text-muted)] text-[15px] leading-relaxed">
-        Two skill sets, one operating style: build the infrastructure, understand the rules it has
-        to comply with.
+        The operating skill set behind every role above — governance discipline paired with hands-on
+        delivery.
       </p>
     </div>
 
-    <div class="grid sm:grid-cols-2 sm:divide-x divide-[var(--line)]">
-      <div class="sm:pr-10 pb-10 sm:pb-0">
-        <h3 class="font-display text-sm text-[var(--teal)] mb-5">Systems &amp; infrastructure</h3>
+    <div class="grid sm:grid-cols-2 sm:divide-x divide-[var(--line)] mb-20">
+      <div class="sm:pr-10 pb-6 sm:pb-0">
         <div>
           <div class="skill-row flex items-center gap-3 py-3">
-            <i class="fa-solid fa-server text-[var(--teal)] w-5 text-center"></i>
-            <span class="text-sm text-[var(--text)]">Enterprise infrastructure &amp; SAP field administration</span>
+            <i class="fa-solid fa-diagram-project text-[var(--teal)] w-5 text-center"></i>
+            <span class="text-sm text-[var(--text)]">Program governance &amp; operational risk management</span>
           </div>
           <div class="skill-row flex items-center gap-3 py-3">
-            <i class="fa-solid fa-shield-halved text-[var(--teal)] w-5 text-center"></i>
-            <span class="text-sm text-[var(--text)]">Cybersecurity hardening &amp; vulnerability reduction</span>
-          </div>
-          <div class="skill-row flex items-center gap-3 py-3">
-            <i class="fa-solid fa-cloud text-[var(--teal)] w-5 text-center"></i>
-            <span class="text-sm text-[var(--text)]">Cloud operations (AWS)</span>
+            <i class="fa-solid fa-people-group text-[var(--teal)] w-5 text-center"></i>
+            <span class="text-sm text-[var(--text)]">Multi-stakeholder coordination &amp; alignment</span>
           </div>
           <div class="skill-row flex items-center gap-3 py-3">
             <i class="fa-solid fa-clipboard-check text-[var(--teal)] w-5 text-center"></i>
-            <span class="text-sm text-[var(--text)]">Compliance frameworks &amp; audit readiness</span>
+            <span class="text-sm text-[var(--text)]">Regulatory compliance &amp; audit readiness</span>
           </div>
           <div class="skill-row flex items-center gap-3 py-3">
-            <i class="fa-solid fa-diagram-project text-[var(--teal)] w-5 text-center"></i>
-            <span class="text-sm text-[var(--text)]">IT service management (ITIL4)</span>
-          </div>
-          <div class="skill-row flex items-center gap-3 py-3">
-            <i class="fa-solid fa-list-check text-[var(--teal)] w-5 text-center"></i>
-            <span class="text-sm text-[var(--text)]">Cross-functional program delivery</span>
+            <i class="fa-solid fa-chalkboard-user text-[var(--teal)] w-5 text-center"></i>
+            <span class="text-sm text-[var(--text)]">Executive briefings &amp; strategic advisement</span>
           </div>
         </div>
       </div>
 
-      <div class="sm:pl-10 pt-10 sm:pt-0">
-        <h3 class="font-display text-sm text-[var(--mint)] mb-5">Climate &amp; governance</h3>
+      <div class="sm:pl-10 pt-6 sm:pt-0">
         <div>
           <div class="skill-row flex items-center gap-3 py-3">
+            <i class="fa-solid fa-users-gear text-[var(--mint)] w-5 text-center"></i>
+            <span class="text-sm text-[var(--text)]">Cross-functional leadership &amp; team management</span>
+          </div>
+          <div class="skill-row flex items-center gap-3 py-3">
+            <i class="fa-solid fa-truck-fast text-[var(--mint)] w-5 text-center"></i>
+            <span class="text-sm text-[var(--text)]">Resource optimization &amp; procurement logistics</span>
+          </div>
+          <div class="skill-row flex items-center gap-3 py-3">
             <i class="fa-solid fa-earth-americas text-[var(--mint)] w-5 text-center"></i>
-            <span class="text-sm text-[var(--text)]">International climate negotiations</span>
+            <span class="text-sm text-[var(--text)]">International program coordination</span>
           </div>
           <div class="skill-row flex items-center gap-3 py-3">
-            <i class="fa-solid fa-sack-dollar text-[var(--mint)] w-5 text-center"></i>
-            <span class="text-sm text-[var(--text)]">Climate finance &amp; scaling mechanisms</span>
+            <i class="fa-solid fa-chart-line text-[var(--mint)] w-5 text-center"></i>
+            <span class="text-sm text-[var(--text)]">Data analysis &amp; institutional reporting</span>
           </div>
-          <div class="skill-row flex items-center gap-3 py-3">
-            <i class="fa-solid fa-industry text-[var(--mint)] w-5 text-center"></i>
-            <span class="text-sm text-[var(--text)]">Green industrial policy</span>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="font-display text-sm text-[var(--text-muted)] mb-6">Technical tools</h3>
+      <div class="space-y-5">
+        <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4">
+          <span class="text-xs text-[var(--text-dim)] w-44 shrink-0">Project &amp; lifecycle management</span>
+          <div class="flex flex-wrap gap-2">
+            <span class="tool-chip text-xs px-3 py-1 rounded-full">Jira</span>
+            <span class="tool-chip text-xs px-3 py-1 rounded-full">Confluence</span>
+            <span class="tool-chip text-xs px-3 py-1 rounded-full">ServiceNow</span>
           </div>
-          <div class="skill-row flex items-center gap-3 py-3">
-            <i class="fa-solid fa-seedling text-[var(--mint)] w-5 text-center"></i>
-            <span class="text-sm text-[var(--text)]">Green economy &amp; trade (PAGE)</span>
+        </div>
+        <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4">
+          <span class="text-xs text-[var(--text-dim)] w-44 shrink-0">Enterprise operations &amp; systems</span>
+          <div class="flex flex-wrap gap-2">
+            <span class="tool-chip text-xs px-3 py-1 rounded-full">Citrix Apps/Desktops</span>
+            <span class="tool-chip text-xs px-3 py-1 rounded-full">Nutanix HCI</span>
+            <span class="tool-chip text-xs px-3 py-1 rounded-full">VMware</span>
+            <span class="tool-chip text-xs px-3 py-1 rounded-full">NetScaler</span>
+            <span class="tool-chip text-xs px-3 py-1 rounded-full">Active Directory</span>
           </div>
-          <div class="skill-row flex items-center gap-3 py-3">
-            <i class="fa-solid fa-people-group text-[var(--mint)] w-5 text-center"></i>
-            <span class="text-sm text-[var(--text)]">Human security &amp; global governance</span>
+        </div>
+        <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4">
+          <span class="text-xs text-[var(--text-dim)] w-44 shrink-0">Automation &amp; reporting</span>
+          <div class="flex flex-wrap gap-2">
+            <span class="tool-chip text-xs px-3 py-1 rounded-full">PowerShell</span>
+            <span class="tool-chip text-xs px-3 py-1 rounded-full">Configuration Management Matrices</span>
+            <span class="tool-chip text-xs px-3 py-1 rounded-full">CI/CD Workflows</span>
           </div>
-          <div class="skill-row flex items-center gap-3 py-3">
-            <i class="fa-solid fa-house-flood-water text-[var(--mint)] w-5 text-center"></i>
-            <span class="text-sm text-[var(--text)]">Emergency &amp; disaster liaison response</span>
+        </div>
+        <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4">
+          <span class="text-xs text-[var(--text-dim)] w-44 shrink-0">Office ecosystems</span>
+          <div class="flex flex-wrap gap-2">
+            <span class="tool-chip text-xs px-3 py-1 rounded-full">VS Code</span>
+            <span class="tool-chip text-xs px-3 py-1 rounded-full">Visio</span>
+            <span class="tool-chip text-xs px-3 py-1 rounded-full">Excel</span>
+            <span class="tool-chip text-xs px-3 py-1 rounded-full">PowerPoint</span>
+            <span class="tool-chip text-xs px-3 py-1 rounded-full">SharePoint</span>
           </div>
         </div>
       </div>
@@ -372,10 +415,14 @@
     </div>
     <div>
       <h3 class="font-display text-lg text-[var(--text)]">Bachelor of Arts, Global Affairs</h3>
-      <p class="text-sm text-[var(--teal)] mt-1">George Mason University</p>
+      <p class="text-sm text-[var(--teal)] mt-1">George Mason University — Fairfax, VA</p>
       <p class="mt-3 text-sm text-[var(--text-muted)] leading-relaxed max-w-lg">
-        Concentration in Human Security and Global Governance — the policy foundation underpinning
-        the later climate specialization below.
+        Concentration in Human Security &amp; Global Governance, with a Minor in Intelligence Analysis
+        and specialized learning in International Economic Policy.
+      </p>
+      <p class="mt-3 text-sm text-[var(--text-muted)] leading-relaxed max-w-lg">
+        Study abroad: George Mason Korea, Songdo, Incheon
+        <span class="text-[var(--text-dim)]"> · Aug 2015 – Jul 2016</span>
       </p>
     </div>
   </div>
@@ -395,54 +442,68 @@
       <div>
         <div class="cert-row flex flex-wrap items-baseline justify-between gap-x-4 py-3">
           <span class="text-sm text-[var(--text)]">Mastering International Climate Negotiations</span>
-          <span class="text-xs text-[var(--text-dim)]">UN CC:e-Learn</span>
+          <span class="text-xs text-[var(--text-dim)]">UN CC:e-Learn (UN Climate Change)</span>
         </div>
         <div class="cert-row flex flex-wrap items-baseline justify-between gap-x-4 py-3">
           <span class="text-sm text-[var(--text)]">Scaling Climate Finance</span>
-          <span class="text-xs text-[var(--text-dim)]">UN CC:e-Learn</span>
+          <span class="text-xs text-[var(--text-dim)]">UN CC:e-Learn (UN Climate Change)</span>
         </div>
         <div class="cert-row flex flex-wrap items-baseline justify-between gap-x-4 py-3">
           <span class="text-sm text-[var(--text)]">Green Economy and Trade</span>
           <span class="text-xs text-[var(--text-dim)]">PAGE / UN CC:e-Learn</span>
         </div>
         <div class="cert-row flex flex-wrap items-baseline justify-between gap-x-4 py-3">
-          <span class="text-sm text-[var(--text)]">Green Industrial Policy</span>
+          <span class="text-sm text-[var(--text)] max-w-xs">Green Industrial Policy: Promoting Competitiveness &amp; Structural Transformation</span>
           <span class="text-xs text-[var(--text-dim)]">UN CC:e-Learn</span>
         </div>
       </div>
     </div>
 
-    <div class="grid sm:grid-cols-[1fr_1.4fr] gap-10 sm:gap-16">
-      <div>
-        <h2 class="font-display font-medium text-2xl sm:text-3xl">Certifications</h2>
-        <p class="mt-3 text-sm text-[var(--text-muted)] leading-relaxed">
-          Active credentials spanning cloud, security, and program management.
-        </p>
-      </div>
-      <div>
-        <div class="cert-row flex flex-wrap items-baseline justify-between gap-x-4 py-3">
-          <span class="text-sm text-[var(--text)]">AWS Certified Cloud Practitioner &amp; SysOps Administrator</span>
-          <span class="text-xs text-[var(--text-dim)] tabular">2023–2026</span>
+    <div>
+      <div class="grid sm:grid-cols-[1fr_1.4fr] gap-10 sm:gap-16">
+        <div>
+          <h2 class="font-display font-medium text-2xl sm:text-3xl">Certifications &amp; training</h2>
+          <p class="mt-3 text-sm text-[var(--text-muted)] leading-relaxed">
+            Active credentials spanning cloud, security, program management, and emergency response.
+          </p>
         </div>
-        <div class="cert-row flex flex-wrap items-baseline justify-between gap-x-4 py-3">
-          <span class="text-sm text-[var(--text)]">CompTIA Security+ SY0-701</span>
-          <span class="text-xs text-[var(--text-dim)] tabular">2025–2028</span>
-        </div>
-        <div class="cert-row flex flex-wrap items-baseline justify-between gap-x-4 py-3">
-          <span class="text-sm text-[var(--text)]">Palo Alto Networks Cybersecurity Professional</span>
-          <span class="text-xs text-[var(--text-dim)] tabular">2023–2026</span>
-        </div>
-        <div class="cert-row flex flex-wrap items-baseline justify-between gap-x-4 py-3">
-          <span class="text-sm text-[var(--text)]">IT Infrastructure Library (ITIL4)</span>
-          <span class="text-xs text-[var(--text-dim)] tabular">2024–2027</span>
-        </div>
-        <div class="cert-row flex flex-wrap items-baseline justify-between gap-x-4 py-3">
-          <span class="text-sm text-[var(--text)]">Google Project Management Professional</span>
-          <span class="text-xs text-[var(--text-dim)] tabular">2022</span>
-        </div>
-        <div class="cert-row flex flex-wrap items-baseline justify-between gap-x-4 py-3">
-          <span class="text-sm text-[var(--text)]">FEMA All-Hazards Liaison Officer (L956), APS Certificate &amp; PDS</span>
-          <span class="text-xs text-[var(--text-dim)] tabular">2015–2016</span>
+        <div>
+          <div class="cert-row flex flex-wrap items-baseline justify-between gap-x-4 py-3">
+            <span class="text-sm text-[var(--text)]">AWS Certified Cloud Practitioner</span>
+            <span class="text-xs text-[var(--text-dim)] tabular">2023–2026</span>
+          </div>
+          <div class="cert-row flex flex-wrap items-baseline justify-between gap-x-4 py-3">
+            <span class="text-sm text-[var(--text)]">AWS Certified SysOps Administrator</span>
+            <span class="text-xs text-[var(--text-dim)] tabular">2023–2026</span>
+          </div>
+          <div class="cert-row flex flex-wrap items-baseline justify-between gap-x-4 py-3">
+            <span class="text-sm text-[var(--text)]">CompTIA Security+ SY0-701</span>
+            <span class="text-xs text-[var(--text-dim)] tabular">2025–2028</span>
+          </div>
+          <div class="cert-row flex flex-wrap items-baseline justify-between gap-x-4 py-3">
+            <span class="text-sm text-[var(--text)]">Palo Alto Networks Cybersecurity Professional</span>
+            <span class="text-xs text-[var(--text-dim)] tabular">2023–2026</span>
+          </div>
+          <div class="cert-row flex flex-wrap items-baseline justify-between gap-x-4 py-3">
+            <span class="text-sm text-[var(--text)]">IT Infrastructure Library (ITIL4)</span>
+            <span class="text-xs text-[var(--text-dim)] tabular">2024–2027</span>
+          </div>
+          <div class="cert-row flex flex-wrap items-baseline justify-between gap-x-4 py-3">
+            <span class="text-sm text-[var(--text)]">Google Project Management Professional</span>
+            <span class="text-xs text-[var(--text-dim)] tabular">2022</span>
+          </div>
+          <div class="cert-row flex flex-wrap items-baseline justify-between gap-x-4 py-3">
+            <span class="text-sm text-[var(--text)]">FEMA All-Hazards Liaison Officer (L956)</span>
+            <span class="text-xs text-[var(--text-dim)] tabular">2016</span>
+          </div>
+          <div class="cert-row flex flex-wrap items-baseline justify-between gap-x-4 py-3">
+            <span class="text-sm text-[var(--text)]">FEMA Advanced Professional Series (APS) Certificate</span>
+            <span class="text-xs text-[var(--text-dim)] tabular">2016</span>
+          </div>
+          <div class="cert-row flex flex-wrap items-baseline justify-between gap-x-4 py-3">
+            <span class="text-sm text-[var(--text)]">FEMA Professional Development Series (PDS)</span>
+            <span class="text-xs text-[var(--text-dim)] tabular">2015</span>
+          </div>
         </div>
       </div>
     </div>
@@ -455,7 +516,7 @@
   <div class="grid sm:grid-cols-[1fr_1.4fr] gap-10 sm:gap-16 items-baseline">
     <h2 class="font-display font-medium text-2xl sm:text-3xl">Languages</h2>
     <div class="flex flex-wrap gap-x-10 gap-y-2 text-sm text-[var(--text-muted)]">
-      <span><span class="text-[var(--text)]">English</span> — Native</span>
+      <span><span class="text-[var(--text)]">English</span> — Native/Fluent</span>
       <span><span class="text-[var(--text)]">Korean</span> — Intermediate</span>
       <span><span class="text-[var(--text)]">Tagalog</span> — Intermediate</span>
     </div>
