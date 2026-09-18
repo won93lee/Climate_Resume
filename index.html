@@ -5,485 +5,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harold Flores | Operations & Climate Governance Leader</title>
     <meta name="description" content="Portfolio of Harold Flores - Systems Engineer, Climate Governance Professional, and Innovation Leader">
-
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- External CSS -->
+    <link href="css/styles.css" rel="stylesheet">
+    
     <!-- Animation Libraries -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-    <style>
-        /* Reset & Base */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #e1e8f0;
-            line-height: 1.6;
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
-
-        /* 3D Background Container */
-        #vanta-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-
-        /* Mobile Fallback for 3D */
-        @media (max-width: 768px) {
-            #vanta-bg { display: none; }
-            body::before {
-                content: '';
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: linear-gradient(135deg, #0b1524 0%, #1a2a3a 100%);
-                z-index: -1;
-            }
-        }
-
-        /* Header */
-        header {
-            background: rgba(11, 21, 36, 0.95);
-            border-bottom: 2px solid #10b981;
-            padding: 2rem 2rem;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            backdrop-filter: blur(10px);
-        }
-
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            background: linear-gradient(135deg, #10b981, #14b8a6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            cursor: pointer;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: #94a3b8;
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: #10b981;
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover::after,
-        .nav-links a.active::after {
-            width: 100%;
-        }
-
-        .nav-links a:hover,
-        .nav-links a.active {
-            color: #10b981;
-        }
-
-        .contact-btn {
-            background: #10b981;
-            color: #0b1524;
-            padding: 0.6rem 1.5rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.85rem;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-        }
-
-        .contact-btn:hover {
-            background: #059669;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(16, 185, 129, 0.2);
-        }
-
-        /* Main Content */
-        main {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 3rem 2rem;
-            min-height: calc(100vh - 200px);
-        }
-
-        /* Tab Content Styling */
-        .tab-content {
-            display: none;
-        }
-
-        .tab-content.active {
-            display: block;
-        }
-
-        /* Section Titles */
-        .section-title {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: #10b981;
-            border-bottom: 2px solid #10b981;
-            padding-bottom: 0.8rem;
-            margin-bottom: 1.5rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        /* Hero */
-        .hero {
-            text-align: center;
-            margin-bottom: 3rem;
-            padding: 2rem 0;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 0.5rem;
-            background: linear-gradient(135deg, #10b981, #14b8a6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero p.subtitle {
-            font-size: 1.3rem;
-            color: #94a3b8;
-            margin-bottom: 1rem;
-        }
-
-        .status-badge {
-            display: inline-block;
-            background: rgba(16, 185, 129, 0.1);
-            border: 1px solid #10b981;
-            color: #10b981;
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
-            50% { box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
-        }
-
-        /* Cards */
-        .summary {
-            background: rgba(30, 41, 59, 0.5);
-            border-left: 3px solid #10b981;
-            padding: 1.5rem;
-            border-radius: 0.5rem;
-            color: #cbd5e1;
-            line-height: 1.8;
-            margin-bottom: 2rem;
-        }
-
-        .competencies {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
-
-        .competency {
-            background: rgba(30, 41, 59, 0.5);
-            padding: 1rem;
-            border-radius: 0.5rem;
-            border-left: 3px solid #10b981;
-            transition: all 0.3s ease;
-            cursor: default;
-        }
-
-        .competency strong {
-            color: #10b981;
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-
-        .competency:hover {
-            transform: rotateX(2deg) rotateY(-2deg) scale(1.02);
-            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.15);
-        }
-
-        /* Job Entries */
-        .job-entry {
-            margin-bottom: 2.5rem;
-            background: rgba(30, 41, 59, 0.3);
-            padding: 1.5rem;
-            border-radius: 0.5rem;
-            border-left: 3px solid #14b8a6;
-            transition: all 0.3s ease;
-        }
-
-        .job-entry:hover {
-            transform: translateX(5px);
-            box-shadow: 0 10px 40px rgba(16, 185, 129, 0.2);
-        }
-
-        .job-title {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #f1f5f9;
-            margin-bottom: 0.3rem;
-        }
-
-        .company {
-            color: #10b981;
-            font-weight: 600;
-            margin-bottom: 0.3rem;
-        }
-
-        .duration {
-            font-size: 0.9rem;
-            color: #64748b;
-            font-style: italic;
-            margin-bottom: 1rem;
-        }
-
-        .job-description {
-            list-style: none;
-            padding: 0;
-        }
-
-        .job-description li {
-            padding-left: 1.5rem;
-            margin-bottom: 0.7rem;
-            position: relative;
-            color: #cbd5e1;
-            line-height: 1.6;
-        }
-
-        .job-description li:before {
-            content: "▸";
-            position: absolute;
-            left: 0;
-            color: #10b981;
-            font-weight: bold;
-        }
-
-        /* Skill Categories */
-        .skill-category {
-            margin-bottom: 1.2rem;
-        }
-
-        .skill-category strong {
-            color: #10b981;
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-
-        .skill-category span {
-            color: #cbd5e1;
-        }
-
-        /* Certification List */
-        .certification-list {
-            columns: 2;
-            column-gap: 2rem;
-        }
-
-        .certification-list li {
-            list-style: none;
-            padding-left: 1.5rem;
-            position: relative;
-            margin-bottom: 0.7rem;
-            color: #cbd5e1;
-            break-inside: avoid;
-        }
-
-        .certification-list li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #10b981;
-            font-weight: bold;
-        }
-
-        /* Education Entry */
-        .education-entry {
-            background: rgba(30, 41, 59, 0.3);
-            padding: 1.5rem;
-            border-radius: 0.5rem;
-            border-left: 3px solid #14b8a6;
-            margin-bottom: 1.5rem;
-        }
-
-        .education-entry h3 {
-            color: #f1f5f9;
-            margin-bottom: 0.5rem;
-        }
-
-        .education-entry p {
-            color: #cbd5e1;
-            margin-bottom: 0.3rem;
-        }
-
-        .degree-type {
-            color: #10b981;
-            font-weight: 600;
-        }
-
-        /* Beyond Resume Section */
-        .personal-interests {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
-
-        .interest-card {
-            background: rgba(30, 41, 59, 0.4);
-            padding: 1.5rem;
-            border-radius: 0.5rem;
-            border: 1px solid rgba(16, 185, 129, 0.3);
-            transition: all 0.3s ease;
-        }
-
-        .interest-card:hover {
-            border-color: #10b981;
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.15);
-        }
-
-        .interest-card h4 {
-            color: #10b981;
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
-        }
-
-        .interest-card p {
-            color: #94a3b8;
-            font-size: 0.95rem;
-        }
-
-        /* Footer */
-        footer {
-            background: rgba(11, 21, 36, 0.95);
-            border-top: 2px solid #10b981;
-            padding: 2rem;
-            text-align: center;
-            color: #64748b;
-            margin-top: 4rem;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2rem; }
-            .nav-links { display: none; }
-            .certification-list { columns: 1; }
-            main { padding: 1.5rem 1rem; }
-            header { padding: 1.5rem 1rem; }
-        }
-    </style>
 </head>
 <body>
-    <!-- 3D Background -->
-    <div id="vanta-bg"></div>
-
-    <header>
-        <nav>
-            <div class="logo" onclick="switchTab('about')">HF</div>
-            <ul class="nav-links" id="tabs">
-                <li><a href="#" data-tab="about" class="active">About</a></li>
-                <li><a href="#" data-tab="experience">Experience</a></li>
-                <li><a href="#" data-tab="skills">Skills</a></li>
-                <li><a href="#" data-tab="personal">Beyond</a></li>
-                <li><a href="#" data-tab="contact">Contact</a></li>
-            </ul>
-            <a href="mailto:won93lee@proton.me" class="contact-btn">Get In Touch</a>
-        </nav>
-    </header>
-
+    <!-- 3D Canvas Container -->
+    <canvas id="webgl-canvas"></canvas>
+    
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-logo">HF</div>
+        <div class="nav-links">
+            <a href="#about" data-section="about">About</a>
+            <a href="#experience" data-section="experience">Experience</a>
+            <a href="#skills" data-section="skills">Skills</a>
+            <a href="#personal" data-section="personal">Beyond</a>
+            <a href="#contact" data-section="contact">Contact</a>
+        </div>
+        <a href="mailto:won93lee@proton.me" class="nav-contact-btn">Get In Touch</a>
+    </nav>
+    
+    <!-- Progress Indicator -->
+    <div class="scroll-progress">
+        <div class="progress-bar"></div>
+    </div>
+    
+    <!-- Main Content -->
     <main>
-        <!-- ABOUT TAB -->
-        <section class="tab-content active" id="about-section" data-aos="fade-up">
-            <section class="hero">
-                <h1>HAROLD FLORES</h1>
-                <p class="subtitle">Operations & Climate Governance Leader</p>
+        <!-- Hero Section -->
+        <section id="hero" class="section hero-section" data-tilt>
+            <div class="section-content">
+                <h1 class="hero-title">HAROLD FLORES</h1>
+                <p class="hero-subtitle">Operations & Climate Governance Leader</p>
                 <div class="status-badge">Available for Executive Climate & Operations Roles</div>
-            </section>
-
+            </div>
+        </section>
+        
+        <!-- About Section -->
+        <section id="about" class="section about-section">
             <h2 class="section-title">Professional Summary</h2>
-            <div class="summary">
+            <div class="summary-card">
                 Senior operations and governance leader with a decade of experience directing enterprise infrastructure, compliance frameworks, and cross-functional program delivery for regulated U.S. government and commercial organizations across North America and Asia. BA in Global Affairs (Global Governance and Human Security), with focused study in climate finance mechanisms and international climate policy. Track record of strategic planning, operational risk oversight, and multi-stakeholder coordination in complex, distributed environments including large-scale infrastructure migrations spanning 200+ sites. Prepared to lead portfolio governance and strategic impact measurement functions at mission-driven climate and sustainable development institutions, bringing integrated technical systems knowledge and policy-level fluency to executive decision-making roles.
             </div>
-
+            
             <h2 class="section-title">Core Competencies</h2>
-            <div class="competencies">
-                <div class="competency">
+            <div class="competencies-grid">
+                <div class="competency-card">
                     <strong>Program Governance</strong>
                     <span>Strategic planning & operational risk</span>
                 </div>
-                <div class="competency">
+                <div class="competency-card">
                     <strong>Team Leadership</strong>
                     <span>Cross-functional coordination</span>
                 </div>
-                <div class="competency">
+                <div class="competency-card">
                     <strong>Compliance & Audit</strong>
                     <span>Regulatory framework management</span>
                 </div>
-                <div class="competency">
+                <div class="competency-card">
                     <strong>Executive Advisory</strong>
                     <span>Strategic briefings & analysis</span>
                 </div>
-                <div class="competency">
+                <div class="competency-card">
                     <strong>Resource Optimization</strong>
                     <span>Procurement & budgeting</span>
                 </div>
-                <div class="competency">
+                <div class="competency-card">
                     <strong>Data Analysis</strong>
                     <span>Institutional reporting</span>
                 </div>
             </div>
         </section>
-
-        <!-- EXPERIENCE TAB -->
-        <section class="tab-content" id="experience-section" data-aos="fade-up">
+        
+        <!-- Experience Section -->
+        <section id="experience" class="section experience-section">
             <h2 class="section-title">Professional Experience</h2>
-
-            <div class="job-entry">
-                <div class="job-title">Expert Systems Engineer</div>
-                <div class="company">Vanjure LLC — Virginia</div>
-                <div class="duration">Nov 2022 – Present</div>
+            
+            <div class="job-entry" data-aos="fade-up">
+                <div class="job-header">
+                    <h3 class="job-title">Expert Systems Engineer</h3>
+                    <div class="company">Vanjure LLC — Virginia</div>
+                    <div class="duration">Nov 2022 – Present</div>
+                </div>
                 <ul class="job-description">
                     <li>Advise large-scale enterprise clients on translating infrastructural and governance requirements into strategic action plans aligned with organizational objectives</li>
                     <li>Coordinate across security, operations, risk mitigation, and procurement teams to maintain full compliance with institutional governance frameworks</li>
@@ -492,11 +104,13 @@
                     <li>Track service-delivery workflows using enterprise software to maintain transparency and coordinate project timelines</li>
                 </ul>
             </div>
-
-            <div class="job-entry">
-                <div class="job-title">Specialized Access Programs Systems Administrator III</div>
-                <div class="company">AIM Innovations LLC — Virginia</div>
-                <div class="duration">Nov 2019 – Nov 2022</div>
+            
+            <div class="job-entry" data-aos="fade-up">
+                <div class="job-header">
+                    <h3 class="job-title">Specialized Access Programs Systems Administrator III</h3>
+                    <div class="company">AIM Innovations LLC — Virginia</div>
+                    <div class="duration">Nov 2019 – Nov 2022</div>
+                </div>
                 <ul class="job-description">
                     <li>Led multi-site operational overhauls and remote system remediation during high-pressure transitions, ensuring business continuity and resource protection across regional sites</li>
                     <li>Headed internal compliance teams as senior technical escalation lead, resolving operational variances to achieve zero non-compliance findings across third-party audits</li>
@@ -505,33 +119,39 @@
                     <li>Coordinated multi-million dollar asset procurement pipelines and logistics per organizational guidelines</li>
                 </ul>
             </div>
-
-            <div class="job-entry">
-                <div class="job-title">Senior Mission Support Officer</div>
-                <div class="company">TPGS Federal — Virginia</div>
-                <div class="duration">Aug 2018 – Nov 2019</div>
+            
+            <div class="job-entry" data-aos="fade-up">
+                <div class="job-header">
+                    <h3 class="job-title">Senior Mission Support Officer</h3>
+                    <div class="company">TPGS Federal — Virginia</div>
+                    <div class="duration">Aug 2018 – Nov 2019</div>
+                </div>
                 <ul class="job-description">
                     <li>Wrote senior-level briefings and analytical reports for executive decision-makers, ensuring technical accuracy and alignment with policy priorities</li>
                     <li>Managed project lifecycles and coordinated cross-functional workflows using enterprise governance tools to maximize operational visibility</li>
                     <li>Controlled financial documentation, asset procurement, and international mobility tracking to support continuous operations</li>
                 </ul>
             </div>
-
-            <div class="job-entry">
-                <div class="job-title">Technical Office Assistant III</div>
-                <div class="company">George Mason University — Virginia</div>
-                <div class="duration">Jan 2014 – Sep 2017</div>
+            
+            <div class="job-entry" data-aos="fade-up">
+                <div class="job-header">
+                    <h3 class="job-title">Technical Office Assistant III</h3>
+                    <div class="company">George Mason University — Virginia</div>
+                    <div class="duration">Jan 2014 – Sep 2017</div>
+                </div>
                 <ul class="job-description">
                     <li>Administered campus-wide cloud architecture and Oracle-based institutional databases, maintaining system availability for high-volume student transactions</li>
                     <li>Deployed and maintained critical technology portfolios and infrastructure across multi-site academic facilities</li>
                     <li>Partnered with engineering teams to implement predictive system monitoring, maintaining SLAs in high-demand environments</li>
                 </ul>
             </div>
-
-            <div class="job-entry">
-                <div class="job-title">Assistant Program & University Organizer</div>
-                <div class="company">George Mason University — South Korea</div>
-                <div class="duration">Aug 2015 – Dec 2015</div>
+            
+            <div class="job-entry" data-aos="fade-up">
+                <div class="job-header">
+                    <h3 class="job-title">Assistant Program & University Organizer</h3>
+                    <div class="company">George Mason University — South Korea</div>
+                    <div class="duration">Aug 2015 – Dec 2015</div>
+                </div>
                 <ul class="job-description">
                     <li>Verified cross-border documentation (DS-160) for international students, ensuring compliance with federal and international regulatory requirements</li>
                     <li>Liaised between domestic offices and international teams, facilitating diplomatic appointments with the U.S. Embassy and coordinating cross-border institutional events</li>
@@ -539,217 +159,151 @@
                 </ul>
             </div>
         </section>
-
-        <!-- SKILLS TAB -->
-        <section class="tab-content" id="skills-section" data-aos="fade-up">
+        
+        <!-- Skills Section -->
+        <section id="skills" class="section skills-section">
             <h2 class="section-title">Technical Skills</h2>
-            <div class="skill-category">
-                <strong>Project Management</strong>
-                <span>Jira, Confluence, ServiceNow</span>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <strong>Project Management</strong>
+                    <span>Jira, Confluence, ServiceNow</span>
+                </div>
+                <div class="skill-category">
+                    <strong>Enterprise Systems</strong>
+                    <span>Citrix VDI, Nutanix HCI, VMware, NetScaler, Active Directory</span>
+                </div>
+                <div class="skill-category">
+                    <strong>Automation & Reporting</strong>
+                    <span>PowerShell, CI/CD Workflows, Configuration Management</span>
+                </div>
+                <div class="skill-category">
+                    <strong>Office Ecosystem</strong>
+                    <span>MS Office Suite (Excel, PowerPoint, Visio, SharePoint)</span>
+                </div>
+                <div class="skill-category">
+                    <strong>Programming & Analysis</strong>
+                    <span>Python, SQL, Object Oriented Programming, Excel Quantitative Modeling</span>
+                </div>
             </div>
-            <div class="skill-category">
-                <strong>Enterprise Systems</strong>
-                <span>Citrix VDI, Nutanix HCI, VMware, NetScaler, Active Directory</span>
-            </div>
-            <div class="skill-category">
-                <strong>Automation & Reporting</strong>
-                <span>PowerShell, CI/CD Workflows, Configuration Management</span>
-            </div>
-            <div class="skill-category">
-                <strong>Office Ecosystem</strong>
-                <span>MS Office Suite (Excel, PowerPoint, Visio, SharePoint)</span>
-            </div>
-            <div class="skill-category">
-                <strong>Programming & Analysis</strong>
-                <span>Python, SQL, Object Oriented Programming, Excel Quantitative Modeling</span>
-            </div>
-
-            <h2 class="section-title" style="margin-top: 3rem;">Education</h2>
-            <div class="education-entry">
+            
+            <h2 class="section-title">Education</h2>
+            <div class="education-card">
                 <h3>George Mason University — Fairfax, VA</h3>
                 <p><span class="degree-type">Bachelor of Arts in Global Affairs</span></p>
                 <p>Concentration: Human Security & Global Governance | Minor: Intelligence Analysis</p>
-                <p style="font-style: italic; color: #94a3b8; margin-top: 0.5rem;">Study Abroad: George Mason Korea, Songdo, Incheon (Aug 2015 – Jul 2016)</p>
+                <p class="study-abroad">Study Abroad: George Mason Korea, Songdo, Incheon (Aug 2015 – Jul 2016)</p>
             </div>
-
-            <h2 class="section-title" style="margin-top: 3rem;">Climate & Sustainability Training</h2>
-            <ul class="job-description">
+            
+            <h2 class="section-title">Climate & Sustainability Training</h2>
+            <ul class="training-list">
                 <li>Mastering International Climate Negotiations — UN CC:e-Learn</li>
                 <li>Scaling Climate Finance — UN CC:e-Learn</li>
                 <li>Green Economy and Trade — PAGE / UN CC:e-Learn</li>
                 <li>Green Industrial Policy: Competitiveness and Structural Transformation — UN CC:e-Learn</li>
             </ul>
-
-            <h2 class="section-title" style="margin-top: 3rem;">Certifications</h2>
-            <ul class="certification-list">
-                <li>AWS Certified Cloud Practitioner (2023–2026)</li>
-                <li>AWS Certified SysOps Administrator (2023–2026)</li>
-                <li>CompTIA Security+ SY0-701 (2025–2028)</li>
-                <li>Palo Alto Networks Cybersecurity Professional (2023–2026)</li>
-                <li>IT Infrastructure Library (ITIL4) (2024–2027)</li>
-                <li>Google Project Management Professional (2022)</li>
-                <li>FEMA All-Hazards Liaison Officer L956 (2016)</li>
-                <li>FEMA Advanced Professional Series Certificate (2016)</li>
-                <li>FEMA Professional Development Series (2015)</li>
-            </ul>
-
-            <h2 class="section-title" style="margin-top: 3rem;">Intellectual Property</h2>
-            <div class="education-entry">
+            
+            <h2 class="section-title">Certifications</h2>
+            <div class="certifications-grid">
+                <div class="cert-item">AWS Certified Cloud Practitioner (2023–2026)</div>
+                <div class="cert-item">AWS Certified SysOps Administrator (2023–2026)</div>
+                <div class="cert-item">CompTIA Security+ SY0-701 (2025–2028)</div>
+                <div class="cert-item">Palo Alto Networks Cybersecurity Professional (2023–2026)</div>
+                <div class="cert-item">IT Infrastructure Library (ITIL4) (2024–2027)</div>
+                <div class="cert-item">Google Project Management Professional (2022)</div>
+                <div class="cert-item">FEMA All-Hazards Liaison Officer L956 (2016)</div>
+                <div class="cert-item">FEMA Advanced Professional Series Certificate (2016)</div>
+                <div class="cert-item">FEMA Professional Development Series (2015)</div>
+            </div>
+            
+            <h2 class="section-title">Intellectual Property</h2>
+            <div class="patent-card">
                 <h3>Patent Pending</h3>
-                <p><strong>Electrochemical-assisted chelation of critical minerals from solid-state slurries</strong></p>
-                <p style="color: #94a3b8; margin-top: 0.5rem;">United States Patent and Trademark Office (USPTO), submitted 2026</p>
+                <p class="patent-title"><strong>Electrochemical-assisted chelation of critical minerals from solid-state slurries</strong></p>
+                <p class="patent-meta">United States Patent and Trademark Office (USPTO), submitted 2026</p>
             </div>
         </section>
-
-        <!-- PERSONAL / BEYOND TAB -->
-        <section class="tab-content" id="personal-section" data-aos="fade-up">
+        
+        <!-- Personal Section -->
+        <section id="personal" class="section personal-section">
             <h2 class="section-title">Beyond the Resume</h2>
-            <p style="color: #cbd5e1; margin-bottom: 2rem; line-height: 1.8;">
+            <p class="personal-intro">
                 I build things for fun when the clock runs out. These interests keep my technical skills sharp while exploring ideas beyond my day-to-day work.
             </p>
-
-            <div class="personal-interests">
-                <div class="interest-card">
+            
+            <div class="interests-grid">
+                <div class="interest-card" data-aos="fade-up">
                     <h4>Quantitative Trading Systems</h4>
                     <p>Independent research into algorithmic trading, market microstructure, and risk modeling. Building backtest engines and execution infrastructure using Python and SQL. This work reinforces my systems thinking and quantitative analysis capabilities.</p>
                 </div>
-
-                <div class="interest-card">
+                
+                <div class="interest-card" data-aos="fade-up">
                     <h4>Language Heritage</h4>
                     <p>Korean (intermediate, rebuilding since 2015) and Tagalog (intermediate, family heritage). Maintaining bilingual connections to my roots while preparing for careers across the APAC region.</p>
                 </div>
-
-                <div class="interest-card">
+                
+                <div class="interest-card" data-aos="fade-up">
                     <h4>Emerging Technology Curiosity</h4>
                     <p>Following advances in human-robot interaction, polar climate science, and critical minerals extraction. These domains intersect with my patent work and graduate studies plans.</p>
                 </div>
-
-                <div class="interest-card">
+                
+                <div class="interest-card" data-aos="fade-up">
                     <h4>Global Mobility</h4>
                     <p>Studied abroad at GMU Korea (2015), born in Manila, with personal ties across South Korea and the Philippines. Ready to relocate internationally for the right opportunity.</p>
                 </div>
-
-                <div class="interest-card">
+                
+                <div class="interest-card" data-aos="fade-up">
                     <h4>Clean Energy Innovation</h4>
                     <p>Patent holder in electrochemical mineral extraction. Interested in scaling sustainable supply chains for the energy transition through novel processing methods.</p>
                 </div>
-
-                <div class="interest-card">
+                
+                <div class="interest-card" data-aos="fade-up">
                     <h4>Emergency Preparedness</h4>
                     <p>FEMA certifications and incident response training from 2015-2016. Understanding crisis management frameworks complements my operational leadership experience.</p>
                 </div>
             </div>
         </section>
-
-        <!-- CONTACT TAB -->
-        <section class="tab-content" id="contact-section" data-aos="fade-up">
+        
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
             <h2 class="section-title">Get In Touch</h2>
             
-            <div class="summary">
-                <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">
-                    I am actively seeking executive-level opportunities in climate governance, operations leadership, and strategic sustainability initiatives. Based in Virginia, open to relocation globally, especially in the APAC region.
-                </p>
-                <p style="color: #94a3b8; font-size: 0.95rem;">
-                    Whether you are recruiting for a P4/D1 level role at an international organization, a director position at a tech firm, or exploring collaboration opportunities, I welcome the conversation.
-                </p>
+            <div class="contact-summary">
+                <p>I am actively seeking executive-level opportunities in climate governance, operations leadership, and strategic sustainability initiatives. Based in Virginia, open to relocation globally, especially in the APAC region.</p>
+                <p>Whether you are recruiting for a P4/D1 level role at an international organization, a director position at a tech firm, or exploring collaboration opportunities, I welcome the conversation.</p>
             </div>
-
+            
             <h2 class="section-title">Contact Information</h2>
-            <div class="competencies">
-                <div class="competency">
+            <div class="contact-grid">
+                <div class="contact-card">
                     <strong>Email</strong>
-                    <a href="mailto:won93lee@proton.me" style="color: #10b981; text-decoration: none;">won93lee@proton.me</a>
+                    <a href="mailto:won93lee@proton.me">won93lee@proton.me</a>
                 </div>
-                <div class="competency">
+                <div class="contact-card">
                     <strong>Location</strong>
                     <span>Virginia, USA | Open to APAC</span>
                 </div>
-                <div class="competency">
+                <div class="contact-card">
                     <strong>GitHub</strong>
                     <span>won93lee</span>
                 </div>
             </div>
-
-            <h2 class="section-title" style="margin-top: 3rem;">Response Time</h2>
-            <p style="color: #94a3b8; line-height: 1.8;">
-                I typically respond within 48 hours during business days. For urgent matters or if you do not receive a reply within one week, please resend or try alternative contact channels.
-            </p>
+            
+            <h2 class="section-title">Response Time</h2>
+            <p class="response-time">I typically respond within 48 hours during business days. For urgent matters or if you do not receive a reply within one week, please resend or try alternative contact channels.</p>
         </section>
     </main>
-
+    
     <footer>
-        <p>&copy; 2026 Harold Flores. Built with HTML, CSS, Three.js & Vanta.js.</p>
+        <p>&copy; 2026 Harold Flores. Built with HTML, CSS & Three.js.</p>
     </footer>
-
-    <script>
-        // Initialize AOS (Animate On Scroll)
-        AOS.init({ duration: 800, once: true, offset: 100 });
-
-        // Initialize Vanta.js Globe Background
-        try {
-            VANTA.GLOBE({
-                el: "#vanta-bg",
-                mouseControls: true,
-                touchControls: true,
-                gyroControls: false,
-                minHeight: 200.00,
-                minWidth: 200.00,
-                scale: 1.00,
-                scaleMobile: 1.00,
-                color: 0x10b981,
-                color2: 0x14b8a6,
-                backgroundColor: 0x0b1524,
-                size: 0.80,
-                shininess: 25.00,
-                labelBackgroundColor: 0x1a2a3a
-            });
-        } catch (error) {
-            console.log("Vanta.js not loaded, using static background");
-        }
-
-        // Tab Switching Functionality
-        function switchTab(tabName) {
-            // Update active states on nav links
-            document.querySelectorAll('#tabs a').forEach(a => {
-                a.classList.remove('active');
-                if (a.dataset.tab === tabName) a.classList.add('active');
-            });
-
-            // Hide all tab contents
-            document.querySelectorAll('.tab-content').forEach(content => {
-                content.classList.remove('active');
-            });
-
-            // Show selected tab with animation
-            const targetSection = document.getElementById(`${tabName}-section`);
-            
-            gsap.fromTo(targetSection,
-                { opacity: 0, y: 30 },
-                { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }
-            );
-            
-            targetSection.classList.add('active');
-            
-            // Re-trigger AOS for new content
-            AOS.refresh();
-        }
-
-        // Add click listeners to nav links
-        document.querySelectorAll('#tabs a').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                switchTab(this.dataset.tab);
-            });
-        });
-
-        // Smooth scroll to top when switching tabs
-        document.querySelectorAll('.tab-content').forEach(section => {
-            section.addEventListener('transitionend', () => {
-                if (section.classList.contains('active')) {
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                }
-            });
-        });
-    </script>
+    
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/three-setup.js"></script>
+    <script src="js/scroll-triggers.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
