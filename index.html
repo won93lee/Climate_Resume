@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Harold Flores — Research Statement &amp; CV</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0d1712; --panel:#142019; --line:#223028;
+  --text:#e8e6dc; --muted:#8a9a8a; --gold:#c99a3b; --teal:#5fa8a3;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg); color:var(--text); font-family:'Inter',sans-serif; font-size:15.5px; line-height:1.7;}
+h1,h2,h3{font-family:'Fraunces',serif; font-weight:600; letter-spacing:-0.01em;}
+.wrap{max-width:720px; margin:0 auto; padding:0 28px;}
+.muted{color:var(--muted);}
+.eyebrow{font-size:11.5px; color:var(--teal); letter-spacing:.1em; margin-bottom:14px; text-transform:uppercase;}
+section{border-top:1px solid var(--line);}
+.panel{padding:90px 0;}
+.reveal{opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease;}
+.reveal.in{opacity:1; transform:translateY(0);}
+h2.section-title{font-size:clamp(24px,3.6vw,34px); margin-bottom:30px;}
+
+/* Hero */
+#hero{position:relative; min-height:100vh; display:flex; flex-direction:column; justify-content:center; overflow:hidden; border-top:none;}
+#hero svg{position:absolute; inset:0; width:100%; height:100%;}
+.hero-inner{position:relative; z-index:2;}
+.hero-inner .kicker{font-size:12.5px; letter-spacing:.14em; color:var(--gold); text-transform:uppercase; margin-bottom:16px;}
+.hero-inner h1{font-size:clamp(38px,7vw,68px); line-height:1.06; max-width:12ch;}
+.hero-inner .target{margin-top:20px; font-size:14px; color:var(--muted); max-width:44ch;}
+.hero-inner .loc{margin-top:26px; font-size:13px; color:var(--muted);}
+
+/* Summary */
+.summary p{max-width:64ch; color:#d3d6c9; font-size:16px;}
+.summary p+p{margin-top:16px;}
+
+/* Competency tags (specimen labels) */
+.tag-grid{display:flex; flex-wrap:wrap; gap:12px;}
+.tag{border:1px solid var(--line); background:var(--panel); padding:10px 16px; font-size:13px; color:#d3d6c9; position:relative; padding-left:22px;}
+.tag::before{content:''; position:absolute; left:10px; top:50%; transform:translateY(-50%); width:6px; height:6px; border-radius:50%; background:var(--teal);}
+
+/* Tools */
+.tool-row{display:grid; grid-template-columns:190px 1fr; gap:8px 24px; padding:15px 0; border-bottom:1px solid var(--line); font-size:13.5px;}
+.tool-row:last-child{border-bottom:none;}
+.tool-row .k{color:var(--muted);}
+
+/* Core sample timeline */
+.core-sample{position:relative; padding-left:26px;}
+.core-sample::before{content:''; position:absolute; left:5px; top:6px; bottom:6px; width:1px; background:var(--line);}
+.job{position:relative; padding-bottom:38px;}
+.job:last-child{padding-bottom:0;}
+.job::before{content:''; position:absolute; left:-26px; top:5px; width:11px; height:11px; border-radius:50%; background:var(--teal); border:2px solid var(--bg);}
+.job h3{font-size:18px;}
+.job .j-org{color:var(--gold); font-size:13px; margin-top:3px;}
+.job .j-meta{font-size:11.5px; color:var(--muted); margin-top:2px; letter-spacing:.03em;}
+.job ul{margin-top:14px; list-style:none;}
+.job li{position:relative; padding-left:16px; margin-bottom:9px; font-size:13.5px; color:#c9cdc0;}
+.job li::before{content:'—'; position:absolute; left:0; color:var(--muted);}
+
+/* Education */
+.edu-card{border:1px solid var(--line); background:var(--panel); padding:26px 28px;}
+.edu-card h3{font-size:19px; margin-bottom:6px;}
+.edu-card .school{color:var(--gold); font-size:13px;}
+.edu-card p{margin-top:12px; font-size:13.5px; color:#c9cdc0;}
+.edu-route{display:flex; align-items:center; gap:10px; margin-top:20px; font-size:12px; color:var(--muted);}
+.edu-route .dot{width:7px; height:7px; border-radius:50%; background:var(--teal);}
+.edu-route .ln{flex:1; height:1px; background:var(--line); position:relative;}
+.edu-route .ln::after{content:'✈'; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); font-size:10px; color:var(--teal); background:var(--panel); padding:0 4px;}
+
+/* Climate training badges */
+.badge-list{display:flex; flex-direction:column; gap:1px; background:var(--line); border:1px solid var(--line);}
+.badge{background:var(--panel); padding:16px 18px; cursor:pointer;}
+.badge .b-head{display:flex; justify-content:space-between; gap:14px; align-items:baseline;}
+.badge .b-name{font-size:14px; color:var(--text);}
+.badge .b-src{font-size:11px; color:var(--teal); white-space:nowrap;}
+.badge .b-desc{max-height:0; overflow:hidden; transition:max-height .35s ease, margin-top .35s ease; font-size:12.5px; color:var(--muted);}
+.badge.open .b-desc{max-height:60px; margin-top:8px;}
+
+/* Certifications */
+.cert-grid{display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--line); border:1px solid var(--line);}
+.cert-grid div{background:var(--panel); padding:14px 16px; font-size:13px; display:flex; justify-content:space-between; gap:10px;}
+.cert-grid .cy{color:var(--muted); font-size:11px; white-space:nowrap;}
+
+/* Patents */
+.patent{border:1px solid var(--gold); background:var(--panel); padding:22px 24px; margin-bottom:16px; cursor:pointer; position:relative;}
+.patent:last-child{margin-bottom:0;}
+.patent .p-seal{position:absolute; top:18px; right:20px; font-size:9.5px; letter-spacing:.08em; color:var(--gold); border:1px solid var(--gold); padding:3px 8px; border-radius:20px;}
+.patent h3{font-size:16px; max-width:80%; font-style:italic; font-weight:500;}
+.patent .p-meta{font-size:11.5px; color:var(--muted); margin-top:8px;}
+.patent .p-body{max-height:0; overflow:hidden; transition:max-height .4s ease, margin-top .4s ease; font-size:13px; color:#c9cdc0;}
+.patent.open .p-body{max-height:100px; margin-top:14px;}
+
+/* Languages */
+.lang-row{display:flex; gap:28px; flex-wrap:wrap;}
+.lang-row div{font-size:13.5px;}
+.lang-row .lvl{color:var(--teal); font-size:11.5px; margin-top:4px;}
+
+footer{padding:70px 0 56px; text-align:center;}
+footer .contact{font-size:14px; margin-top:10px;}
+footer .end{margin-top:36px; font-size:11px; color:var(--muted); letter-spacing:.08em;}
+
+@media (max-width:600px){
+  .tool-row{grid-template-columns:1fr;} .cert-grid{grid-template-columns:1fr;} .panel{padding:60px 0;}
+}
+@media (prefers-reduced-motion: reduce){*{animation:none !important; transition:none !important;}}
+</style>
+</head>
+<body>
+
+<section id="hero">
+  <svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
+<path d="M 0 40.0 L 40 43.9 L 80 47.6 L 120 50.6 L 160 52.7 L 200 53.9 L 240 53.9 L 280 52.7 L 320 50.6 L 360 47.6 L 400 43.9 L 440 40.0 L 480 36.0 L 520 32.4 L 560 29.4 L 600 27.3 L 640 26.1 L 680 26.1 L 720 27.3 L 760 29.4 L 800 32.5" stroke="#5fa8a3" stroke-width="1.2" fill="none" opacity="0.18"/>
+<path d="M 0 119.2 L 40 123.3 L 80 126.0 L 120 127.0 L 160 126.2 L 200 123.7 L 240 119.6 L 280 114.4 L 320 108.4 L 360 102.2 L 400 96.1 L 440 90.8 L 480 86.6 L 520 84.0 L 560 83.0 L 600 83.8 L 640 86.3 L 680 90.4 L 720 95.6 L 760 101.6 L 800 107.9" stroke="#223028" stroke-width="1.2" fill="none" opacity="0.12"/>
+<path d="M 0 199.6 L 40 199.8 L 80 197.6 L 120 193.2 L 160 186.9 L 200 179.2 L 240 170.8 L 280 162.3 L 320 154.5 L 360 147.9 L 400 143.1 L 440 140.4 L 480 140.2 L 520 142.4 L 560 146.8 L 600 153.1 L 640 160.8 L 680 169.2 L 720 177.7 L 760 185.6 L 800 192.2" stroke="#5fa8a3" stroke-width="1.2" fill="none" opacity="0.18"/>
+<path d="M 0 247.1 L 40 244.6 L 80 241.3 L 120 237.6 L 160 233.6 L 200 229.7 L 240 226.3 L 280 223.5 L 320 221.7 L 360 221.0 L 400 221.4 L 440 222.9 L 480 225.4 L 520 228.7 L 560 232.4 L 600 236.4 L 640 240.3 L 680 243.7 L 720 246.5 L 760 248.3 L 800 249.0" stroke="#223028" stroke-width="1.2" fill="none" opacity="0.12"/>
+<path d="M 0 307.4 L 40 301.2 L 80 295.0 L 120 289.2 L 160 284.2 L 200 280.5 L 240 278.4 L 280 278.1 L 320 279.5 L 360 282.6 L 400 287.1 L 440 292.7 L 480 298.8 L 520 305.0 L 560 310.9 L 600 315.8 L 640 319.5 L 680 321.6 L 720 321.9 L 760 320.5 L 800 317.4" stroke="#5fa8a3" stroke-width="1.2" fill="none" opacity="0.18"/>
+<path d="M 0 354.5 L 40 347.0 L 80 341.0 L 120 336.9 L 160 335.1 L 200 335.7 L 240 338.7 L 280 343.8 L 320 350.7 L 360 358.7 L 400 367.2 L 440 375.6 L 480 383.0 L 520 389.1 L 560 393.1 L 600 394.9 L 640 394.3 L 680 391.3 L 720 386.1 L 760 379.3 L 800 371.3" stroke="#223028" stroke-width="1.2" fill="none" opacity="0.12"/>
+<path d="M 0 417.8 L 40 416.4 L 80 416.0 L 120 416.8 L 160 418.7 L 200 421.5 L 240 425.0 L 280 428.8 L 320 432.8 L 360 436.6 L 400 439.8 L 440 442.2 L 480 443.6 L 520 444.0 L 560 443.2 L 600 441.3 L 640 438.5 L 680 435.0 L 720 431.1 L 760 427.2 L 800 423.4" stroke="#5fa8a3" stroke-width="1.2" fill="none" opacity="0.18"/>
+<path d="M 0 473.4 L 40 475.4 L 80 479.0 L 120 484.0 L 160 489.8 L 200 496.0 L 240 502.2 L 280 507.7 L 320 512.3 L 360 515.4 L 400 516.9 L 440 516.6 L 480 514.6 L 520 510.9 L 560 506.0 L 600 500.2 L 640 494.0 L 680 487.8 L 720 482.3 L 760 477.7 L 800 474.6" stroke="#223028" stroke-width="1.2" fill="none" opacity="0.12"/>
+<path d="M 0 541.1 L 40 548.4 L 80 556.7 L 120 565.2 L 160 573.3 L 200 580.3 L 240 585.7 L 280 589.0 L 320 590.0 L 360 588.5 L 400 584.7 L 440 578.9 L 480 571.6 L 520 563.3 L 560 554.8 L 600 546.7 L 640 539.6 L 680 534.2 L 720 531.0 L 760 530.0 L 800 531.5" stroke="#5fa8a3" stroke-width="1.2" fill="none" opacity="0.18"/>
+  </svg>
+  <div class="wrap hero-inner">
+    <div class="kicker">Research Statement &amp; Curriculum Vitae</div>
+    <h1>Harold Flores</h1>
+    <div class="target">Applicant, Master's Program — UST–KICT (University of Science &amp; Technology, Korea Institute of Civil Engineering &amp; Building Technology)</div>
+    <div class="loc">Fairfax, Virginia · 434-960-3542 · won93lee@proton.me</div>
+  </div>
+</section>
+
+<section><div class="wrap panel reveal">
+  <div class="eyebrow">Statement of Purpose</div>
+  <h2 class="section-title">From Infrastructure to Environmental Governance</h2>
+  <div class="summary">
+    <p>Cross-functional enterprise systems engineer with nearly four years of core engineering experience and a decade of total background in global operations, procurement logistics, and institutional compliance.</p>
+    <p>Pivoting toward international sustainability strategy and environmental governance, leveraging an academic foundation in Global Affairs alongside specialized UN CC:e-Learn climate certifications. Proven track record managing multi-million dollar procurement pipelines and achieving zero non-compliance findings in third-party audits.</p>
+    <p>Seeking a research-driven Master's degree within the UST institute ecosystem to bridge the gap between technical engineering innovation and sustainable environmental solutions, positioning for leadership roles within global environmental organizations.</p>
+  </div>
+</div></section>
+
+<section><div class="wrap panel reveal">
+  <div class="eyebrow">Core Competencies</div>
+  <h2 class="section-title">Working Method</h2>
+  <div class="tag-grid" id="tag-grid"></div>
+</div></section>
+
+<section><div class="wrap panel reveal">
+  <div class="eyebrow">Technical Tools</div>
+  <h2 class="section-title">Instruments on Hand</h2>
+  <div class="tool-row"><div class="k">Project &amp; Lifecycle</div><div>Jira, Confluence, ServiceNow</div></div>
+  <div class="tool-row"><div class="k">Enterprise Operations</div><div>Citrix Apps/Desktops, Nutanix HCI, VMware, NetScaler, Active Directory</div></div>
+  <div class="tool-row"><div class="k">Automation &amp; Reporting</div><div>PowerShell, Configuration Management Matrices, CI/CD Workflows, VS Code</div></div>
+  <div class="tool-row"><div class="k">Office Ecosystems</div><div>MS Office Suite (Visio, Excel, PowerPoint, SharePoint)</div></div>
+</div></section>
+
+<section><div class="wrap panel reveal">
+  <div class="eyebrow">Professional Experience</div>
+  <h2 class="section-title">Field Record</h2>
+  <div class="core-sample" id="core-sample"></div>
+</div></section>
+
+<section><div class="wrap panel reveal">
+  <div class="eyebrow">Education</div>
+  <h2 class="section-title">Academic Record</h2>
+  <div class="edu-card">
+    <h3>Bachelor of Arts in Global Affairs</h3>
+    <div class="school">George Mason University · Fairfax, VA</div>
+    <p>Concentration: Human Security &amp; Global Governance — Minor: Intelligence Analysis — Specialized Learning: International Economic Policy.</p>
+    <div class="edu-route">
+      <span class="muted">Fairfax, VA</span><div class="dot"></div><div class="ln"></div><div class="dot"></div><span class="muted">Songdo, Incheon</span>
+    </div>
+    <p class="muted" style="margin-top:12px;">Study Abroad: George Mason Korea, Incheon Global Campus (Aug 2015 – Jul 2016)</p>
+  </div>
+</div></section>
+
+<section><div class="wrap panel reveal">
+  <div class="eyebrow">Climate &amp; Sustainability Training</div>
+  <h2 class="section-title">Expedition Log</h2>
+  <div class="badge-list" id="badge-list"></div>
+</div></section>
+
+<section><div class="wrap panel reveal">
+  <div class="eyebrow">Certifications &amp; Training</div>
+  <h2 class="section-title">Standing Credentials</h2>
+  <div class="cert-grid" id="cert-grid"></div>
+</div></section>
+
+<section><div class="wrap panel reveal">
+  <div class="eyebrow">Intellectual Property — Click to Expand</div>
+  <h2 class="section-title">Patents Pending</h2>
+  <div id="patent-list"></div>
+</div></section>
+
+<section><div class="wrap panel reveal">
+  <div class="eyebrow">Foreign Languages</div>
+  <h2 class="section-title">Languages</h2>
+  <div class="lang-row">
+    <div>English<div class="lvl">NATIVE / FLUENT</div></div>
+    <div>Korean<div class="lvl">INTERMEDIATE</div></div>
+    <div>Tagalog<div class="lvl">INTERMEDIATE</div></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="eyebrow">End of Record</div>
+  <h2 class="section-title" style="margin-bottom:6px;">Harold Flores</h2>
+  <div class="contact">won93lee@proton.me · 434-960-3542 · Fairfax, Virginia</div>
+  <div class="end">SUBMITTED FOR REVIEW — UST–KICT</div>
+</div></footer>
+
+<script>
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+/* Competencies */
+["Program Governance & Operational Risk Management","Multi-Stakeholder Coordination & Alignment","Regulatory Compliance & Audit Readiness","Executive Briefings & Strategic Advisement","Cross-Functional Leadership & Team Management","Resource Optimization & Procurement Logistics","International Program Coordination","Data Analysis & Institutional Reporting"].forEach(c=>{
+  const d=document.createElement('div'); d.className='tag'; d.textContent=c;
+  document.getElementById('tag-grid').appendChild(d);
+});
+
+/* Experience */
+const jobs=[
+ {title:"Expert Systems Engineer", org:"Vanjure LLC · Virginia", meta:"Nov 2022 – Present", bullets:[
+  "Primary operational advisor for large-scale enterprise clients, translating infrastructure and governance requirements into strategic action plans.",
+  "Led cross-functional coordination across security, operations, risk, and procurement to align with institutional compliance and governance frameworks.",
+  "Orchestrated end-to-end infrastructure lifecycle operations — capacity planning, patching schedules, and version updates.",
+  "Managed secure access ecosystems, enforcing zero-trust protocols and identity authentication matrices.",
+  "Led a large-scale infrastructure migration from VMware to Nutanix hyperconverged infrastructure across 200 sites, including Citrix VDI standardization and database server conversion."]},
+ {title:"Field Systems Administrator III", org:"AIM Innovations LLC · Virginia", meta:"Nov 2019 – Nov 2022", bullets:[
+  "Directed multi-site operational overhauls and remote systems remediation, ensuring 100% business continuity.",
+  "Led internal compliance alignment as senior escalation lead — zero non-compliance findings across third-party audits.",
+  "Engineered automated configuration frameworks, cutting administrative overhead 33% and vulnerability metrics 80%.",
+  "Designed end-to-end security configurations across large network layers.",
+  "Coordinated multi-million dollar asset procurement pipelines and logistics."]},
+ {title:"Senior Mission Support Officer", org:"TPGS · Virginia", meta:"Aug 2018 – Nov 2019", bullets:[
+  "Authored senior-level briefings and analytical assessments for executive decision-makers.",
+  "Managed complex project lifecycles using enterprise governance tracking tools across parallel schedules.",
+  "Controlled financial documentation, asset procurement logistics, and international mobility tracking."]},
+ {title:"Access Control Specialist", org:"Cencore LLC · Maryland", meta:"Sep 2017 – Jun 2018", bullets:[
+  "Coordinated organizational access eligibility determinations with cross-functional oversight entities to ensure policy compliance.",
+  "Maintained the lifecycle of sensitive credential records, enforcing data accuracy, secure tracking, and retention compliance."]},
+ {title:"Technical Office Assistant III", org:"George Mason University · Virginia", meta:"Jan 2014 – Sep 2017", bullets:[
+  "Administered campus-wide cloud architecture and Oracle-based databases for high-volume student systems.",
+  "Coordinated deployment, lifecycle auditing, and maintenance of technology portfolios across multi-site academic spaces.",
+  "Implemented predictive uptime monitoring, holding strict SLAs and scalability benchmarks."]},
+ {title:"Assistant Program & University Organizer", org:"George Mason University · South Korea", meta:"Aug 2015 – Dec 2015", bullets:[
+  "Managed cross-border documentation (DS-160), ensuring adherence to federal and international regulations.",
+  "Served as primary liaison between domestic academic offices and international teams, including U.S. Embassy appointments.",
+  "Led strategic orientation frameworks to optimize international integration and operational efficiency."]}
+];
+const cs=document.getElementById('core-sample');
+jobs.forEach(j=>{
+  const d=document.createElement('div'); d.className='job';
+  d.innerHTML=`<h3>${j.title}</h3><div class="j-org">${j.org}</div><div class="j-meta">${j.meta}</div><ul>${j.bullets.map(b=>`<li>${b}</li>`).join('')}</ul>`;
+  cs.appendChild(d);
+});
+
+/* Climate training */
+const climate=[
+ {n:"Mastering International Climate Negotiations", s:"UN CC:e-Learn", d:"Covers the mechanics, actors, and diplomacy behind international climate negotiations."},
+ {n:"Scaling Climate Finance", s:"UN CC:e-Learn", d:"Examines mechanisms for mobilizing and directing capital toward climate action."},
+ {n:"Green Economy and Trade", s:"PAGE / UN CC:e-Learn", d:"Explores how trade policy intersects with green economic transition."},
+ {n:"Green Industrial Policy: Competitiveness & Structural Transformation", s:"UN CC:e-Learn", d:"Looks at industrial policy tools for competitive, low-carbon transformation."}
+];
+const bl=document.getElementById('badge-list');
+climate.forEach(c=>{
+  const b=document.createElement('div'); b.className='badge';
+  b.innerHTML=`<div class="b-head"><span class="b-name">${c.n}</span><span class="b-src">${c.s}</span></div><div class="b-desc">${c.d}</div>`;
+  b.addEventListener('click',()=>b.classList.toggle('open'));
+  bl.appendChild(b);
+});
+
+/* Certifications */
+const certs=[["Google AI Professional","2026–2050"],["AWS Certified Cloud Practitioner","2023–2026"],["AWS Certified SysOps Administrator","2023–2026"],["CompTIA Security+ SY0-701","2025–2028"],["Palo Alto Networks Cybersecurity Professional","2023–2026"],["IT Infrastructure Library (ITIL4)","2024–2027"],["Google Project Management Professional","2022–2050"],["FEMA All-Hazards Liaison Officer (L956)","2016–2050"],["FEMA Advanced Professional Series (APS)","2016–2050"],["FEMA Professional Development Series (PDS)","2015–2050"]];
+const cg=document.getElementById('cert-grid');
+certs.forEach(([n,y])=>{
+  const d=document.createElement('div'); d.innerHTML=`<span>${n}</span><span class="cy">${y}</span>`;
+  cg.appendChild(d);
+});
+
+/* Patents */
+const patents=[
+ {t:"Electrochemical-Assisted Chelation of Critical Minerals from Solid-State Slurries", m:"USPTO · Submitted 2026", d:"A proposed method for extracting critical minerals from solid-state slurries using electrochemically assisted chelation."},
+ {t:"Cryptographically Secured Real-Time RFID Logistics Management and Automated Customs System", m:"USPTO · Submitted 2026", d:"A proposed system for securing real-time RFID logistics tracking and automating customs processing using cryptographic controls."}
+];
+const pl=document.getElementById('patent-list');
+patents.forEach(p=>{
+  const d=document.createElement('div'); d.className='patent';
+  d.innerHTML=`<div class="p-seal">PENDING</div><h3>"${p.t}"</h3><div class="p-meta">${p.m}</div><div class="p-body">${p.d}</div>`;
+  d.addEventListener('click',()=>d.classList.toggle('open'));
+  pl.appendChild(d);
+});
+</script>
+</body>
+</html>
